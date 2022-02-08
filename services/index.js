@@ -1,4 +1,3 @@
-import { graphql } from "graphql"
 import { request, gql } from "graphql-request"
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
@@ -35,5 +34,36 @@ export const getPosts = async () => {
   }`
   const result = await request(graphqlAPI, query)
   return result.postsConnection.edges
+}
 
+export const getPostDetails = async (slug) => {
+  const query = gql`
+  query GetPostDetails($slug: String!) {
+    post(where: { slug: $slug}){
+      authors {
+        bio
+        id
+        name
+        photo {
+          url
+        }
+      }
+      createdAt
+      slug
+      title
+      excerpt
+      featuredImage {
+        url
+      }
+      categories {
+        name
+        slug
+      }
+      content {
+        raw
+      }
+    }
+  }`
+  const result = await request(graphqlAPI, query, { slug })
+  return result.post
 }
