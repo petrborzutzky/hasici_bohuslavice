@@ -1,7 +1,7 @@
-import React from 'react'
-import { getPosts, getPostDetails } from '../../services'
-import { CalendarIcon } from '@heroicons/react/outline'
-import moment from 'moment'
+import React from "react"
+import { getPosts, getPostDetails } from "../../services"
+import { CalendarIcon } from "@heroicons/react/outline"
+import moment from "moment"
 
 
 
@@ -24,13 +24,13 @@ const PostDetails = ({ post }) => {
     }
 
     switch (type) {
-      case 'heading-three':
+      case "heading-three":
         return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
-      case 'paragraph':
+      case "paragraph":
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
-      case 'heading-four':
+      case "heading-four":
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
-      case 'image':
+      case "image":
         return (
           <img
             key={index}
@@ -50,12 +50,12 @@ return (
       <img
           src={post.featuredImage.url}
           alt={post.title}
-          className='w-full object-cover h-64 mb-5'
+          className="w-full object-cover h-64 mb-5"
       />
-      <h1 className='text-xl mb-5'>{post.title} </h1>
-      <div className='text-xs mb-5'>
-      <CalendarIcon className='w-4 inline-block mb-1 mr-2 text-red-800' />
-      {moment(post.createdAt).format('DD. MM. YYYY')}
+      <h1 className="text-xl mb-5">{post.title} </h1>
+      <div className="text-xs mb-5">
+      <CalendarIcon className="w-4 inline-block mb-1 mr-2 text-red-800" />
+      {moment(post.createdAt).format("DD. MM. YYYY")}
 
       </div>
       

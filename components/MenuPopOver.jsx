@@ -1,11 +1,11 @@
-import React, {Fragment} from 'react'
-import { Popover, Transition } from '@headlessui/react'
+import React, {Fragment} from "react"
+import { Popover, Transition } from "@headlessui/react"
 
-import { ChevronDownIcon } from '@heroicons/react/solid'
-import Link from 'next/link'
+import { ChevronDownIcon } from "@heroicons/react/solid"
+import Link from "next/link"
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ")
 }
 
 const MenuPopOver = ({titleMenu, childrenMenu}) => {
@@ -14,15 +14,15 @@ const MenuPopOver = ({titleMenu, childrenMenu}) => {
     <>
       <Popover.Button
         className={classNames(
-          open ? 'text-red-800' : 'text-gray-500',
-          'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-red-800 focus:outline-none '
+          open ? "text-red-800" : "text-gray-500",
+          "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-red-800 focus:outline-none "
         )}
       >
         <span>{titleMenu}</span>
         <ChevronDownIcon
           className={classNames(
-            open ? 'text-red-700' : 'text-gray-400',
-            'ml-2 h-5 w-5 group-hover:text-red-800'
+            open ? "text-red-700" : "text-gray-400",
+            "ml-2 h-5 w-5 group-hover:text-red-800"
           )}
           aria-hidden="true"
         />
@@ -45,7 +45,7 @@ const MenuPopOver = ({titleMenu, childrenMenu}) => {
                   key={item.name}
                   href={item.href}  
                 >
-                  <div className='flex cursor-pointer hover:bg-red-50 -m-3 p-3'>
+                  <div className="flex cursor-pointer hover:bg-red-50 -m-3 p-3">
                     <item.icon className="flex-shrink-0 h-6 w-6 text-red-800" aria-hidden="true" />
                     <div className="ml-4">
                       <p className="text-base font-medium text-gray-900">{item.name}</p>

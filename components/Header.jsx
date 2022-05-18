@@ -1,5 +1,5 @@
-import React, { useContext, Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
+import React, { useContext, Fragment } from "react"
+import { Popover, Transition } from "@headlessui/react"
 import {
   BookmarkAltIcon,
   CalendarIcon,
@@ -14,53 +14,53 @@ import {
   UsersIcon,
   InformationCircleIcon,
   FireIcon
-} from '@heroicons/react/outline'
-import { ChevronDownIcon } from '@heroicons/react/solid'
-import Link from 'next/link'
-import MenuPopOver from './MenuPopOver'
-import MobilMenu from './MobilMenu'
+} from "@heroicons/react/outline"
+import { ChevronDownIcon } from "@heroicons/react/solid"
+import Link from "next/link"
+import MenuPopOver from "./MenuPopOver"
+import MobilMenu from "./MobilMenu"
 
 const sdh = [
   {
-    name: 'O sboru',
-    description: 'Informace o sboru, historie, atd.',
-    href: 'o-sboru',
+    name: "O sboru",
+    description: "Informace o sboru, historie, atd.",
+    href: "o-sboru",
     icon: InformationCircleIcon,
   },
   {
-    name: 'Členové výboru',
-    description: 'Seznam členů výboru SDH',
-    href: 'clenove-vyboru',
+    name: "Členové výboru",
+    description: "Seznam členů výboru SDH",
+    href: "clenove-vyboru",
     icon: UsersIcon,
   }
 
 ]
 const jsdh = [
   {
-    name: 'Technika',
-    description: 'Výjezdové vozidla a další technika',
-    href: 'technika',
+    name: "Technika",
+    description: "Výjezdové vozidla a další technika",
+    href: "technika",
     icon: TruckIcon,
   },
   {
-    name: 'Členové jednotky',
-    description: 'Seznam členů jednotky',
-    href: 'clenove-jednotky',
+    name: "Členové jednotky",
+    description: "Seznam členů jednotky",
+    href: "clenove-jednotky",
     icon: UsersIcon,
   }
 
 ]
 const mladiHasici = [
   {
-    name: 'O mladých hasičích',
-    description: 'Informace o mladých hasičích',
-    href: 'o-mladych-hasicich',
+    name: "O mladých hasičích",
+    description: "Informace o mladých hasičích",
+    href: "o-mladych-hasicich",
     icon: InformationCircleIcon,
   },
   {
-    name: 'Soutěže',
-    description: 'Informace o soutežích mladých hasičů',
-    href: 'souteze-mh',
+    name: "Soutěže",
+    description: "Informace o soutežích mladých hasičů",
+    href: "souteze-mh",
     icon: FireIcon,
   }
 
@@ -68,15 +68,15 @@ const mladiHasici = [
 
 const muzi = [
   {
-    name: 'O týmu mužů',
-    description: 'Informace o sportovním týmů mužů',
-    href: 'o-muzich',
+    name: "O týmu mužů",
+    description: "Informace o sportovním týmů mužů",
+    href: "o-muzich",
     icon: InformationCircleIcon,
   },
   {
-    name: 'Soutěže',
-    description: 'Informace o soutežích mužů',
-    href: 'souteze-muzi',
+    name: "Soutěže",
+    description: "Informace o soutežích mužů",
+    href: "souteze-muzi",
     icon: FireIcon,
   }
 
@@ -84,15 +84,15 @@ const muzi = [
 
 const tfa = [
   {
-    name: 'Tým TFA',
-    description: 'Informace o sportovním týmů TFA',
-    href: 'o-tfa',
+    name: "Tým TFA",
+    description: "Informace o sportovním týmů TFA",
+    href: "o-tfa",
     icon: InformationCircleIcon,
   },
   {
-    name: 'Soutěže',
-    description: 'Informace o soutežích družstva TFA',
-    href: 'souteze-tfa',
+    name: "Soutěže",
+    description: "Informace o soutežích družstva TFA",
+    href: "souteze-tfa",
     icon: FireIcon,
   }
 
@@ -100,55 +100,57 @@ const tfa = [
 
 
 const callsToAction = [
-  { name: 'Watch Demo', href: '#', icon: PlayIcon },
-  { name: 'Contact Sales', href: '#', icon: PhoneIcon },
+  { name: "Watch Demo", href: "#", icon: PlayIcon },
+  { name: "Contact Sales", href: "#", icon: PhoneIcon },
 ]
 const resources = [
   {
-    name: 'Help Center',
-    description: 'Get all of your questions answered in our forums or contact support.',
-    href: '#',
+    name: "Help Center",
+    description: "Get all of your questions answered in our forums or contact support.",
+    href: "#",
     icon: SupportIcon,
   },
   {
-    name: 'Guides',
-    description: 'Learn how to maximize our platform to get the most out of it.',
-    href: '#',
+    name: "Guides",
+    description: "Learn how to maximize our platform to get the most out of it.",
+    href: "#",
     icon: BookmarkAltIcon,
   },
   {
-    name: 'Events',
-    description: 'See what meet-ups and other events we might be planning near you.',
-    href: '#',
+    name: "Events",
+    description: "See what meet-ups and other events we might be planning near you.",
+    href: "#",
     icon: CalendarIcon,
   },
-  { name: 'Security', description: 'Understand how we take your privacy seriously.', href: '#', icon: ShieldCheckIcon },
+  { name: "Security", description: "Understand how we take your privacy seriously.", href: "#", icon: ShieldCheckIcon },
 ]
 const recentPosts = [
-  { id: 1, name: 'Boost your conversion rate', href: '#' },
-  { id: 2, name: 'How to use search engine optimization to drive traffic to your site', href: '#' },
-  { id: 3, name: 'Improve your customer experience', href: '#' },
+  { id: 1, name: "Boost your conversion rate", href: "#" },
+  { id: 2, name: "How to use search engine optimization to drive traffic to your site", href: "#" },
+  { id: 3, name: "Improve your customer experience", href: "#" },
 ]
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ")
 }
 
 const Header = () => {
   return (
-    <Popover className="bg-white sticky top-0 shadow-lg">
+    
+    
+    <Popover className="bg-white z-50 sticky top-0 shadow-lg">
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
       <div className="flex justify-between items-center py-2 lg:justify-start md:space-x-10">
         <div className="flex justify-start lg:w-0 lg:flex-1">
-          <Link href="/" alt='Hasiči Bohuslavice'>
-            <span className='flex items-center cursor-pointer'>
+          <Link href="/" alt="Hasiči Bohuslavice">
+            <span className="flex items-center cursor-pointer">
               
               <img
                 className="h-10 pl-6 w-auto sm:pl-4 sm:h-20"
                 src="../logo.png"
                 alt="Hasiči Bohuslavice"
               />
-              <span className='ml-5 text-2xl'>Hasiči Bohuslavice</span>
+              <span className="ml-5 text-2xl">Hasiči Bohuslavice</span>
             </span>
           </Link>
         </div>
@@ -159,11 +161,11 @@ const Header = () => {
           </Popover.Button>
         </div>
         <Popover.Group as="nav" className="hidden lg:flex space-x-10">
-          <MenuPopOver titleMenu='Sdh' childrenMenu={sdh} />
-          <MenuPopOver titleMenu='Jednotka SDH' childrenMenu={jsdh} />
-          <MenuPopOver titleMenu='Mladí hasiči' childrenMenu={mladiHasici} />
-          <MenuPopOver titleMenu='Muži' childrenMenu={muzi} />
-          <MenuPopOver titleMenu='TFA' childrenMenu={tfa} />
+          <MenuPopOver titleMenu="Sdh" childrenMenu={sdh} />
+          <MenuPopOver titleMenu="Jednotka SDH" childrenMenu={jsdh} />
+          <MenuPopOver titleMenu="Mladí hasiči" childrenMenu={mladiHasici} />
+          <MenuPopOver titleMenu="Muži" childrenMenu={muzi} />
+          <MenuPopOver titleMenu="TFA" childrenMenu={tfa} />
 
           <Link href="#footer">
             <span className="text-base cursor-pointer font-medium text-gray-500 hover:text-red-800">Kontakt</span>
@@ -205,11 +207,11 @@ const Header = () => {
             </div>
             <div className="mt-6">
               <nav className="grid gap-y-8">
-                <MobilMenu titleMenu='Sdh' childrenMenu={sdh} />
-                <MobilMenu titleMenu='Jednotka SDH' childrenMenu={jsdh} />
-                <MobilMenu titleMenu='Mladí hasiči' childrenMenu={mladiHasici} />
-                <MobilMenu titleMenu='Muži' childrenMenu={muzi} />
-                <MobilMenu titleMenu='TFA' childrenMenu={tfa} />                
+                <MobilMenu titleMenu="Sdh" childrenMenu={sdh} />
+                <MobilMenu titleMenu="Jednotka SDH" childrenMenu={jsdh} />
+                <MobilMenu titleMenu="Mladí hasiči" childrenMenu={mladiHasici} />
+                <MobilMenu titleMenu="Muži" childrenMenu={muzi} />
+                <MobilMenu titleMenu="TFA" childrenMenu={tfa} />                
               </nav>
             </div>
           </div>
