@@ -38,19 +38,23 @@ const MenuPopOver = ({titleMenu, childrenMenu}) => {
         leaveTo="opacity-0 translate-y-1"
       >
         <Popover.Panel className="absolute z-50 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+
           <div className="shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
             <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
               {childrenMenu.map((item) => (
                 <Link
                   key={item.name}
-                  href={item.href}  
+                  href={item.href}
                 >
+                  
                   <div className="flex cursor-pointer hover:bg-red-50 -m-3 p-3">
-                    <item.icon className="flex-shrink-0 h-6 w-6 text-red-800" aria-hidden="true" />
-                    <div className="ml-4">
-                      <p className="text-base font-medium text-gray-900">{item.name}</p>
-                      <p className="mt-1 text-sm text-gray-500">{item.description}</p>
+                  <Popover.Button><item.icon className="flex-shrink-0 h-6 w-6 text-red-800" aria-hidden="true" /></Popover.Button>
+                    
+                    <div className="ml-4 grow">
+                      <p className="text-base font-medium text-gray-900"><Popover.Button>{item.name}</Popover.Button></p>
+                      <p className="mt-1 text-sm text-gray-500"><Popover.Button>{item.description}</Popover.Button></p>
                     </div>
+                    
                   </div>
                 </Link>
               ))}

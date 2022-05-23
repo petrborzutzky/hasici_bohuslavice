@@ -168,7 +168,7 @@ const Header = () => {
           <MenuPopOver titleMenu="TFA" childrenMenu={tfa} />
 
           <Link href="#footer">
-            <span className="text-base cursor-pointer font-medium text-gray-500 hover:text-red-800">Kontakt</span>
+              <span className="text-base cursor-pointer font-medium text-gray-500 hover:text-red-800">Kontakt</span>
           </Link>
 
 
@@ -205,13 +205,25 @@ const Header = () => {
                 </Popover.Button>
               </div>
             </div>
-            <div className="mt-6">
+            <div className="mt-5">
               <nav className="grid gap-y-8">
+                
                 <MobilMenu titleMenu="Sdh" childrenMenu={sdh} />
+                
                 <MobilMenu titleMenu="Jednotka SDH" childrenMenu={jsdh} />
                 <MobilMenu titleMenu="Mladí hasiči" childrenMenu={mladiHasici} />
                 <MobilMenu titleMenu="Muži" childrenMenu={muzi} />
-                <MobilMenu titleMenu="TFA" childrenMenu={tfa} />                
+                <MobilMenu titleMenu="TFA" childrenMenu={tfa} />
+                <Link href="#footer">
+                  <span className="-m-4 pl-4 p-1 flex cursor-pointer items-center hover:bg-red-50">
+                    <InformationCircleIcon className="flex-shrink-0 h-6 w-6 text-red-800" aria-hidden="true" />
+                    <Popover.Button>
+                      <span className="ml-2 text-base font-medium text-gray-900">Kontakt</span>
+                    </Popover.Button>
+                  </span>
+                </Link>
+
+                
               </nav>
             </div>
           </div>
