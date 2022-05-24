@@ -1,5 +1,5 @@
 import React from "react"
-import { getPosts, getPostDetails } from "../../services"
+import { getPosts, getPostDetails } from "../services"
 import { CalendarIcon } from "@heroicons/react/outline"
 import moment from "moment"
 
@@ -58,7 +58,9 @@ return (
       {moment(post.createdAt).format("DD. MM. YYYY")}
 
       </div>
-      
+      <p className="mb-5">
+          {post.excerpt}
+      </p>
 
       {post.content.raw.children.map( (typeObj, index) => {
         const children = typeObj.children.map((item, itemIndex) => getContentFragment(itemIndex, item.text, item))

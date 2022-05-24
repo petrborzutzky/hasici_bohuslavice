@@ -47,12 +47,13 @@ const MenuPopOver = ({titleMenu, childrenMenu}) => {
                   href={item.href}
                 >
                   
-                  <div className="flex cursor-pointer hover:bg-red-50 -m-3 p-3">
-                  <Popover.Button><item.icon className="flex-shrink-0 h-6 w-6 text-red-800" aria-hidden="true" /></Popover.Button>
+                  <div className="flex cursor-pointer hover:bg-red-50 -m-3">
+                  <Popover.Button><item.icon className="flex-shrink-0 h-6 w-6 text-red-800 ml-3" aria-hidden="true" /></Popover.Button>
                     
                     <div className="ml-4 grow">
-                      <p className="text-base font-medium text-gray-900"><Popover.Button>{item.name}</Popover.Button></p>
-                      <p className="mt-1 text-sm text-gray-500"><Popover.Button>{item.description}</Popover.Button></p>
+                    <Popover.Button className="w-full text-left pt-3"><p className="text-base font-medium text-gray-900 ">{item.name}</p>
+                      <p className="mt-1 text-sm text-gray-500 pb-3">{item.description}</p>
+                      </Popover.Button>
                     </div>
                     
                   </div>
