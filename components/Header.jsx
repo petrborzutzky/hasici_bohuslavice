@@ -146,7 +146,7 @@ const Header = () => {
             <span className="flex items-center cursor-pointer">
               
               <img
-                className="h-10 pl-6 w-auto sm:pl-4 sm:h-20"
+                className="h-10 w-auto sm:pl-4 sm:h-20"
                 src="../logo.png"
                 alt="Hasiči Bohuslavice"
               />

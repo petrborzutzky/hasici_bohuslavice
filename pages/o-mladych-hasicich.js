@@ -12,7 +12,7 @@ function OmladychHasicich () {
       <li>Petr Kubík</li>
       <li>Jiří Lasák</li>
       <li>Sylva Ďurinová</li>
-      <li>Matiáš Ďurina</li>
+      <li>Matyáš Ďurina</li>
       <li>Ester Heidutzková</li>
       <li>Amálie Černovská</li>
     </ul>

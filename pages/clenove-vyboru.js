@@ -8,8 +8,9 @@ function clenove() {
       <div className="flex justify-evenly gap-5 flex-wrap">
         <Avatar name="Antonín Blokša" functions="Starosta sboru" />
         <Avatar name="Robert Lasák" functions="Jednatel" />
-        <Avatar name="Petr Kubík" functions="Vedoucí mládeže" />
-        <Avatar name="Jan Mausch" functions="Velitel Sboru" />
+        <Avatar name="Petr Kubík" functions="Náměstek starosty" />
+        <Avatar name="Jan Manusch" functions="Velitel Sboru" />
+        <Avatar name="Sylva Ďurinová" functions="Vedoucí mládeže" />
         <Avatar name="Anna Vitásková" functions="Revizor sboru" />
         <Avatar name="Anna Sněhotová" functions="Hospodář" />
         <Avatar name="David Zajíček" functions="Člen výboru" />
@@ -19,7 +20,10 @@ function clenove() {
         <Avatar name="Jiří Lasák" functions="Člen výboru" />
         <Avatar name="Jaroslav Kubík" functions="Člen výboru" />
         <Avatar name="Jarmila Blokšová" functions="Člen výboru" />
-        <Avatar name="Sylva Ďurinová" functions="Člen výboru" />
+        <Avatar name="Pavel Gazda" functions="Člen výboru" />
+        <Avatar name="Zdeněk Tomíček" functions="Člen výboru" />
+        <Avatar name="Kateřina Plevová" functions="Člen výboru" />
+        <Avatar name="Petr Borzutzký" functions="Člen výboru" />
       </div>
     </div>
   )

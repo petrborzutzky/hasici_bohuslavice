@@ -9,9 +9,9 @@ function OMuzich () {
     <div className="flex justify-evenly gap-5 flex-wrap mb-5">
         <Avatar name="Jaroslav Kubík" functions="Rozdělovač" />
         <Avatar name="Jaroslav Černovský" functions="Mezispoj savic" />
-        <Avatar name="Lukáš Kučera" functions="Mašina" />
+        <Avatar name="Lukáš Kučera" functions="Koš" />
         <Avatar name="David Pašek" functions="Proudař" />
-        <Avatar name="David Kubík" functions="??" />
+        <Avatar name="David Kubík" functions="Proudař" />
         <Avatar name="Matyáš Ďurina" functions="Proudař" />
     </div>
    

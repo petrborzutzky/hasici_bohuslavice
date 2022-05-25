@@ -9,7 +9,7 @@ const Layout = ({children}) => {
     <>
       <Header />
 
-      <div className="container max-w-7xl mx-auto md:px-10 px-2 mb-8">
+      <div className="max-w-7xl mx-auto md:px-10 px-2 mb-8">
         <Head>
 
           <title>Hasiči Bohuslavice</title>
@@ -21,7 +21,7 @@ const Layout = ({children}) => {
           <div className="grow mt-10">
             {children}
           </div>
-          <div className="container shrink-0 h-[32rem] w-96 mx-auto mb-40 lg:ml-10 mt-10 shadow-lg">
+          <div className="container shrink-0 h-[8rem] w-80 mx-auto mb-40 lg:ml-10 mt-10 shadow-lg">
             <FacebookWidget />
           </div>
         </div>

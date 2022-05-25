@@ -1,11 +1,15 @@
 import React from "react"
 import Link from "next/link";
+import {ExternalLinkIcon} from "@heroicons/react/outline"
 
 function SoutezeMuzi () {
   return <div className="container">
     <h1 className="text-2xl text-center mb-5">Soutěže</h1>
-    <h3 className="text-lg font-bold mb-5 underline hover:text-red-700">
-      <Link href="https://www.nhhl.cz/">Noční hlučínská hasičská liga (NHHL)</Link>
+    
+    <h3 className="text-lg font-bold mb-5">
+        <Link href="https://www.nhhl.cz/">
+          <span className="text-lg font-bold mb-5 cursor-pointer underline hover:text-red-700">Noční hlučínská hasičská liga (NHHL)<ExternalLinkIcon className="h-6 w-6 inline -mt-1 ml-1" /></span>
+        </Link>
     </h3>
     <p className="mb-10">Mužské družstvo je pravidelným účastníkem NHHL. V roce 2022 se bude konat již celkově 8. ročník.
     </p>
