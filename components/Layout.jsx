@@ -16,12 +16,12 @@ const Layout = ({children}) => {
           <link rel="icon" href="/logo.png" />
 
         </Head>
-
+        
         <div className="flex flex-col lg:flex-row min-h-screen">
           <div className="grow mt-10">
             {children}
           </div>
-          <div className="container shrink-0 h-[8rem] w-80 mx-auto mb-40 lg:ml-10 mt-10 shadow-lg">
+          <div className="container shrink-0 h-[48rem] w-80 mx-auto mb-40 lg:ml-10 mt-10 shadow-lg">
             <FacebookWidget />
           </div>
         </div>

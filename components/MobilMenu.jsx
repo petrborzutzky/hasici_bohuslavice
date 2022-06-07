@@ -9,7 +9,7 @@ const MobilMenu = ({titleMenu, childrenMenu}) => {
       {childrenMenu.map((item) => (
       <Link
         key={item.name}
-        href={item.href}
+        href={`/${item.href}`}
       >
         
         <div className="-m-4 ml-5 p-1 flex cursor-pointer hover:bg-red-50">

@@ -1,16 +1,21 @@
-import React from "react"
-import Image from "next/image"
-import Link from "next/link"
-import Avatar from "../components/Avatar"
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import Avatar from "../components/Avatar";
 
 function clenove() {
   return (
     <div className="container">
-      <h2 className="text-xl text-center mb-5">Členové výjezdové jednotky - JSDH Bohuslavice</h2>
+      <h2 className="text-xl text-center mb-5">
+        Členové výjezdové jednotky - JSDH Bohuslavice
+      </h2>
       <div className="flex justify-evenly gap-5 flex-wrap">
         <Avatar name="Jan Manusch" functions="Velitel, NDT" />
         <Avatar name="Petr Kubík" functions="Velitel, NDT, pilař" />
-        <Avatar name="David Zajíček" functions="Velitel, strojník, NDT, pilař" />
+        <Avatar
+          name="David Zajíček"
+          functions="Velitel, strojník, NDT, pilař"
+        />
         <Avatar name="Petr Borzutzký" functions="Technik, NDT" />
         <Avatar name="David Vitásek" functions="Strojník, NDT" />
         <Avatar name="Pavel Gazda" functions="Strojník, NDT, pilař" />
@@ -26,7 +31,7 @@ function clenove() {
       </div>
       <p className="text-center mt-10">*NDT - Nositel dýchací techniky</p>
     </div>
-  )
+  );
 }
 
-export default clenove
+export default clenove;

@@ -1,22 +1,35 @@
-import { request, gql } from "graphql-request"
+import { request, gql } from "graphql-request";
 
-const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
+const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
-
-export const getPosts = async () => {
+export const getPosts = async (limit, offset) => {
   const query = gql`
-  query MyQuery {
-    postsConnection(orderBy: createdAt_DESC) {
-      edges {
-        node {
-          authors {
-            bio
-            id
-            name
-            photo {
+    query GetPosts($limit: Int!, $offset: Int!) {
+      postsConnection(orderBy: createdAt_DESC, first: $limit, skip: $offset) {
+        edges {
+          node {
+            createdAt
+            slug
+            title
+            excerpt
+            featuredImage {
               url
             }
           }
+        }
+      }
+    }
+  `;
+  const result = await request(graphqlAPI, query, { limit, offset });
+  return result.postsConnection.edges;
+};
+
+export const getPostsAll = async () => {
+  const query = gql`
+  query GetPosts() {
+    postsConnection() {
+      edges {
+        node {
           createdAt
           slug
           title
@@ -24,46 +37,51 @@ export const getPosts = async () => {
           featuredImage {
             url
           }
-          categories {
-            name
-            slug
-          }
         }
       }
     }
-  }`
-  const result = await request(graphqlAPI, query)
-  return result.postsConnection.edges
-}
+  }`;
+  const result = await request(graphqlAPI, query, {});
+  return result.postsConnection.edges;
+};
+
+export const getPagesCount = async (postPerPage) => {
+  const query = gql`
+  query GetPostsCount() {
+    postsConnection() {
+      aggregate {
+        count
+      }
+    }
+  }`;
+  const result = await request(graphqlAPI, query, {});
+  let pagesCount = 0;
+  let postsCount = result.postsConnection.aggregate.count;
+  while (postsCount > 0) {
+    pagesCount++;
+    postsCount -= postPerPage;
+  }
+
+  return pagesCount;
+};
 
 export const getPostDetails = async (slug) => {
   const query = gql`
-  query GetPostDetails($slug: String!) {
-    post(where: { slug: $slug}){
-      authors {
-        bio
-        id
-        name
-        photo {
+    query GetPostDetails($slug: String!) {
+      post(where: { slug: $slug }) {
+        createdAt
+        slug
+        title
+        excerpt
+        featuredImage {
           url
         }
-      }
-      createdAt
-      slug
-      title
-      excerpt
-      featuredImage {
-        url
-      }
-      categories {
-        name
-        slug
-      }
-      content {
-        raw
+        content {
+          raw
+        }
       }
     }
-  }`
-  const result = await request(graphqlAPI, query, { slug })
-  return result.post
-}
+  `;
+  const result = await request(graphqlAPI, query, { slug });
+  return result.post;
+};

@@ -5,8 +5,8 @@ import { CalendarIcon} from "@heroicons/react/outline"
 
 const PostCard = ({ post }) => {
   return (
-    <Link href={`/${post.slug}`}>
-      <div className="bg-white h-min-full mb-10 shadow-lg cursor-pointer">
+    <Link href={`/clanky/${post.slug}`}>
+      <div className="bg-white h-min-full mb-10 shadow-lg cursor-pointer hover:text-red-700 hover:shadow-xl">
         <img
           src={post.featuredImage.url}
           alt={post.title}

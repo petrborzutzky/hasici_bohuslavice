@@ -44,7 +44,8 @@ const MenuPopOver = ({titleMenu, childrenMenu}) => {
               {childrenMenu.map((item) => (
                 <Link
                   key={item.name}
-                  href={item.href}
+                  href={`/${item.href}`}
+                  
                 >
                   
                   <div className="flex cursor-pointer hover:bg-red-50 -m-3">

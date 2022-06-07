@@ -1,10 +1,12 @@
-import React from "react"
-import Avatar from "../components/Avatar"
+import React from "react";
+import Avatar from "../components/Avatar";
 
 function clenove() {
   return (
     <div className="container">
-      <h2 className="text-xl text-center mb-5">Členové výboru SDH Bohuslavice</h2>
+      <h2 className="text-xl text-center mb-5">
+        Členové výboru SDH Bohuslavice
+      </h2>
       <div className="flex justify-evenly gap-5 flex-wrap">
         <Avatar name="Antonín Blokša" functions="Starosta sboru" />
         <Avatar name="Robert Lasák" functions="Jednatel" />
@@ -26,7 +28,7 @@ function clenove() {
         <Avatar name="Petr Borzutzký" functions="Člen výboru" />
       </div>
     </div>
-  )
+  );
 }
 
-export default clenove
+export default clenove;
