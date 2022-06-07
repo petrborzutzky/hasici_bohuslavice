@@ -1,4 +1,7 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+
 
 function OmladychHasicich() {
   return (
@@ -12,7 +15,17 @@ function OmladychHasicich() {
         tělocvične ZŠ Bohuslavice.
       </p>
       <h3 className="text-lg font-bold mb-5"></h3>
-
+      <div className="container relative w-full h-96 shadow-lg mt-10 mb-10 hover:shadow-xl">
+        <Link href="/mladiHasici.jpg" className="cursor-pointer">
+          <Image
+            src="/mladiHasici.jpg"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center 60%"
+            className="cursor-pointer"
+          />
+        </Link>
+      </div>
       <h3 className="text-lg font-bold mb-5">Vedoucí a instruktoři</h3>
       <ul className="list-disc ml-10">
         <li>Petr Kubík</li>
