@@ -7,6 +7,7 @@ import { useState } from "react";
 const ContactMember = ({ title, name, phone, mail, facebook }) => {
   const [fColor, setfColor] = useState("white");
   const [bColor, setbColor] = useState("transparent");
+  const phoneWithoutSpace = phone.replace(/ /g,'')
 
   return (
     <div>
@@ -14,7 +15,8 @@ const ContactMember = ({ title, name, phone, mail, facebook }) => {
       {name}
       <br />
       <PhoneIcon className="h-5 w-5 mr-2 inline" />
-      {phone}
+      <Link href={`tel:${phoneWithoutSpace}`}>{phone}</Link>
+      
       <br />
       <MailIcon className="h-5 w-5 mr-2 inline" />{" "}
       <Link href={`mailto:${mail}`}>{mail}</Link>
