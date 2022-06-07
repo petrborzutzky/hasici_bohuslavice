@@ -193,7 +193,7 @@ const Header = () => {
           className="absolute bg-white top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden"
         >
           <div className="shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-            <div className="pt-5 pb-6 px-5">
+            <div className="pt-5 pb-5 px-5">
               <div className="flex items-center justify-between">
                 <div>
                   <img
@@ -210,8 +210,8 @@ const Header = () => {
                   </Popover.Button>
                 </div>
               </div>
-              <div className="mt-5">
-                <nav className="grid gap-y-8">
+              <div className="mt-2">
+                <nav className="grid gap-y-0">
                   <MobilMenu titleMenu="Sdh" childrenMenu={sdh} />
 
                   <MobilMenu titleMenu="Jednotka SDH" childrenMenu={jsdh} />
@@ -222,7 +222,7 @@ const Header = () => {
                   <MobilMenu titleMenu="Muži" childrenMenu={muzi} />
                   <MobilMenu titleMenu="TFA" childrenMenu={tfa} />
                   <Link href="#footer">
-                    <span className="-m-4 pl-4 p-1 flex cursor-pointer items-center hover:bg-red-50">
+                    <span className="mt-1 p-1 flex cursor-pointer items-center hover:bg-red-50">
                       <InformationCircleIcon
                         className="flex-shrink-0 h-6 w-6 text-red-800"
                         aria-hidden="true"
