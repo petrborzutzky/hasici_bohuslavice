@@ -1,39 +1,36 @@
-import React, { useEffect, useState} from "react"
-import { FacebookProvider, Feed, Page } from "react-facebook"
-import Script from "next/script"
+import React, { useEffect, useState } from "react";
+import { FacebookProvider, Feed, Page } from "react-facebook";
+import Script from "next/script";
 
 const FacebookWidget = React.memo((props) => {
   useEffect(() => {
     const script = document.createElement("script");
 
-    script.src = "https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v13.0&appId=601068137590863&autoLogAppEvents=1";
+    script.src =
+      "https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v13.0&appId=601068137590863&autoLogAppEvents=1";
     script.async = false;
     script.defer = true;
     script.crossOrigin = "anonymous";
-    script.nonce="pCP3EiIk";
+    script.nonce = "pCP3EiIk";
 
     document.body.appendChild(script);
 
     return () => {
-
       document.body.removeChild(script);
-    }
+    };
   }, []);
-  
+
   const [isDisplayed, setIsDisplayed] = useState(false);
 
   useEffect(() => {
     setInterval(() => {
       setIsDisplayed(true);
-      
     }, 3000);
   }, []);
 
-
   return (
     <>
-      
-        {/*<>
+      {/*<>
           <div id="fb-root"></div>
           
           <div
@@ -57,23 +54,19 @@ const FacebookWidget = React.memo((props) => {
           </div>
           
               </>*/}
-        {}
-        <div
+      {}
+      <div
         className="fb-page"
-        data-href="https://www.facebook.com/hasiciBohuslavice" 
+        data-href="https://www.facebook.com/hasiciBohuslavice"
         data-width="320"
         data-hide-cover="false"
-        data-show-facepile="true">
-        </div>
+        data-show-facepile="true"
+      ></div>
 
-        <div className="powr-facebook-feed" id="1dd853b3_1654000752"></div><script src="https://www.powr.io/powr.js?platform=react"></script>
-
-      
-
+      <div className="powr-facebook-feed" id="1dd853b3_1654000752"></div>
+      <script src="https://www.powr.io/powr.js?platform=react"></script>
     </>
+  );
+});
 
-
-  )
-})
-
-export default FacebookWidget
+export default FacebookWidget;

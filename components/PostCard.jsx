@@ -1,7 +1,7 @@
-import React from "react"
-import moment from "moment"
-import Link from "next/link"
-import { CalendarIcon} from "@heroicons/react/outline"
+import React from "react";
+import moment from "moment";
+import Link from "next/link";
+import { CalendarIcon } from "@heroicons/react/outline";
 
 const PostCard = ({ post }) => {
   return (
@@ -13,16 +13,14 @@ const PostCard = ({ post }) => {
           className="w-full object-cover h-48"
         />
         <h1 className="text-center text-xl pt-4">{post.title}</h1>
-        <p className="p-5 mb-5 text-center">
-          {post.excerpt}
-        </p>
+        <p className="p-5 mb-5 text-center">{post.excerpt}</p>
         <div className="pb-5 text-center">
           <CalendarIcon className="w-5 inline-block mb-1 mr-2 text-red-800" />
           {moment(post.createdAt).format("DD. MM. YYYY")}
         </div>
       </div>
     </Link>
-  )
-}
+  );
+};
 
-export default PostCard
+export default PostCard;
