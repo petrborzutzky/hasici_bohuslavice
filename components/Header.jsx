@@ -193,7 +193,7 @@ const Header = () => {
           className="absolute bg-white top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden"
         >
           <div className="shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-            <div className="pt-5 pb-5 px-5">
+            <div className="pb-5 pt-2 px-5">
               <div className="flex items-center justify-between">
                 <div>
                   <img
