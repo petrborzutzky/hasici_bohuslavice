@@ -7,19 +7,28 @@ import { useState } from "react";
 const ContactMember = ({ title, name, phone, mail, facebook }) => {
   const [fColor, setfColor] = useState("white");
   const [bColor, setbColor] = useState("transparent");
-  const phoneWithoutSpace = phone.replace(/ /g,'')
+  const phoneWithoutSpace = phone.replace(/ /g, "");
 
   return (
     <div>
       <div className="text-xl mb-5">{title}</div>
       {name}
       <br />
-      <PhoneIcon className="h-5 w-5 mr-2 inline" />
-      <Link href={`tel:${phoneWithoutSpace}`}>{phone}</Link>
-      
+
+      <Link href={`tel:${phoneWithoutSpace}`}>
+        <span className="hover:text-red-700 cursor-pointer">
+          <PhoneIcon className="h-5 w-5 mr-2 inline" />
+          {phone}
+        </span>
+      </Link>
+
       <br />
-      <MailIcon className="h-5 w-5 mr-2 inline" />{" "}
-      <Link href={`mailto:${mail}`}>{mail}</Link>
+
+      <Link href={`mailto:${mail}`}>
+        <span className="hover:text-red-700 cursor-pointer">
+          <MailIcon className="h-5 w-5 mr-2 inline" /> {mail}
+        </span>
+      </Link>
       <br />
       {facebook ? (
         <SocialIcon
