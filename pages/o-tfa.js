@@ -22,7 +22,7 @@ function OTfa() {
         <Avatar name="Adam Ryš" functions="nad 35 let" />
         <Avatar name="David Pašek" functions="do 35 let" />
         <Avatar name="Matyáš Ďurina" functions="do 35 let" />
-        <Avatar name="Sylvie Ďurinová" functions="žena" />
+        <Avatar name="Silvie Ďurinová" functions="žena" />
         <Avatar name="Nikol Miketová" functions="žena" />
         <Avatar name="Jiří Lasák" functions="do 35 let" />
         <Avatar name="Jiří Vitásek" functions="do 35 let" />

@@ -30,7 +30,7 @@ function OmladychHasicich() {
       <ul className="list-disc ml-10">
         <li>Petr Kubík</li>
         <li>Jiří Lasák</li>
-        <li>Sylva Ďurinová</li>
+        <li>Silvie Ďurinová</li>
         <li>Matyáš Ďurina</li>
         <li>Ester Heidutzková</li>
         <li>Amálie Černovská</li>
