@@ -66,6 +66,7 @@ const Footer = () => {
           </span>
         </Link>
       </div>
+      <section id="kontakty" />
       <div className="w-full flex bg-stone-600 flex-wrap justify-center text-center gap-20 text-white p-5">
         <ContactMember
           title="Velitel jednotky"

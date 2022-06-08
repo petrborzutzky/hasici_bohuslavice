@@ -23,7 +23,6 @@ const Layout = ({ children }) => {
         </div>
       </div>
 
-      <section id="footer" />
       <Footer />
     </>
   );
