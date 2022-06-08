@@ -23,7 +23,7 @@ const Footer = () => {
         <Link href="https://www.bohuslavice.eu/">
           <span className="cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">
             <img
-              src="../sponzori/obecBohuslavice.png"
+              src="../sponzori/obecbohuslavice.png"
               className="h-20"
               alt="Obec Bohuslavice"
             />
