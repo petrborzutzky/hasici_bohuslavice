@@ -12,7 +12,7 @@ function clenove() {
         <Avatar name="Robert Lasák" functions="Jednatel" />
         <Avatar name="Petr Kubík" functions="Náměstek starosty" />
         <Avatar name="Jan Manusch" functions="Velitel Sboru" />
-        <Avatar name="Sylva Ďurinová" functions="Vedoucí mládeže" />
+        <Avatar name="Silvie Ďurinová" functions="Vedoucí mládeže" />
         <Avatar name="Anna Vitásková" functions="Revizor sboru" />
         <Avatar name="Anna Sněhotová" functions="Hospodář" />
         <Avatar name="David Zajíček" functions="Člen výboru" />
@@ -25,7 +25,7 @@ function clenove() {
         <Avatar name="Pavel Gazda" functions="Člen výboru" />
         <Avatar name="Zdeněk Tomíček" functions="Člen výboru" />
         <Avatar name="Kateřina Plevová" functions="Člen výboru" />
-        <Avatar name="Petr Borzutzký" functions="Člen výboru" />
+        <Avatar name="Petr Borzutzký" functions="Člen výboru" photo="/avatars/01.jpg"/>
       </div>
     </div>
   );

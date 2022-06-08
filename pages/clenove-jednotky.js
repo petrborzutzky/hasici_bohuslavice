@@ -16,7 +16,7 @@ function clenove() {
           name="David Zajíček"
           functions="Velitel, strojník, NDT, pilař"
         />
-        <Avatar name="Petr Borzutzký" functions="Technik, NDT" />
+        <Avatar name="Petr Borzutzký" functions="Technik, NDT" photo="/avatars/01.jpg" />
         <Avatar name="David Vitásek" functions="Strojník, NDT" />
         <Avatar name="Pavel Gazda" functions="Strojník, NDT, pilař" />
         <Avatar name="David Kubík" functions="Strojník, NDT" />
