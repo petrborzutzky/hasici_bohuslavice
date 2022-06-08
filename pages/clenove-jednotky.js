@@ -10,13 +10,20 @@ function clenove() {
         Členové výjezdové jednotky - JSDH Bohuslavice
       </h2>
       <div className="flex justify-evenly gap-5 flex-wrap">
-        <Avatar name="Jan Manusch" functions="Velitel, NDT" />
-        <Avatar name="Petr Kubík" functions="Velitel, NDT, pilař" />
+        <Avatar
+          name="Jan Manusch"
+          functions="Velitel jednotky, velitel družstva, NDT"
+        />
+        <Avatar name="Petr Kubík" functions="Velitel družstva, NDT, pilař" />
         <Avatar
           name="David Zajíček"
-          functions="Velitel, strojník, NDT, pilař"
+          functions="Velitel družstva, strojník, NDT, pilař"
         />
-        <Avatar name="Petr Borzutzký" functions="Technik, NDT" photo="/avatars/01.jpg" />
+        <Avatar
+          name="Petr Borzutzký"
+          functions="Technik, NDT"
+          photo="/avatars/01.jpg"
+        />
         <Avatar name="David Vitásek" functions="Strojník, NDT" />
         <Avatar name="Pavel Gazda" functions="Strojník, NDT, pilař" />
         <Avatar name="David Kubík" functions="Strojník, NDT" />

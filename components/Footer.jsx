@@ -69,7 +69,7 @@ const Footer = () => {
           title="Velitel jednotky"
           name="Jan Manusch"
           phone="+420 724 188 479"
-          mail="jan.manusch@agroup.cz"
+          mail="jan.manusch@seznam.cz"
           facebook="jan.manusch.3"
         />
         <ContactMember
