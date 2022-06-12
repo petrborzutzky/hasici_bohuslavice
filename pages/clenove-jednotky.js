@@ -12,7 +12,7 @@ function clenove() {
       <div className="flex justify-evenly gap-5 flex-wrap">
         <Avatar
           name="Jan Manusch"
-          functions="Velitel jednotky, velitel družstva, NDT"
+          functions="Velitel jednotky, NDT"
         />
         <Avatar name="Petr Kubík" functions="Velitel družstva, NDT, pilař" />
         <Avatar
