@@ -1,5 +1,5 @@
 import React from "react";
-import Avatar from "../components/Avatar";
+import { Avatar } from "../components";
 
 function clenove() {
   return (
@@ -19,13 +19,20 @@ function clenove() {
         <Avatar name="David Kubík" functions="Člen výboru" />
         <Avatar name="David Vitásek" functions="Strojník" />
         <Avatar name="Adam Ryš" functions="Referent ochrany obyvatelstva" />
-        <Avatar name="Jiří Lasák" functions="Referent prevence a výchovné činnosti" />
+        <Avatar
+          name="Jiří Lasák"
+          functions="Referent prevence a výchovné činnosti"
+        />
         <Avatar name="Jaroslav Kubík" functions="Člen výboru" />
         <Avatar name="Jarmila Blokšová" functions="Kronikář" />
         <Avatar name="Pavel Gazda" functions="Člen výboru" />
         <Avatar name="Zdeněk Tomíček" functions="Člen výboru" />
         <Avatar name="Kateřina Plevová" functions="Referentka žen" />
-        <Avatar name="Petr Borzutzký" functions="Člen výboru" photo="/avatars/01.jpg"/>
+        <Avatar
+          name="Petr Borzutzký"
+          functions="Člen výboru"
+          photo="/avatars/01.jpg"
+        />
       </div>
     </div>
   );

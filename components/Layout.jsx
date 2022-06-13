@@ -1,7 +1,6 @@
 import React from "react";
-import { Header, Footer } from "./";
+import { Header, Footer, FacebookWidget } from "./";
 import Head from "next/head";
-import FacebookWidget from "./FacebookWidget";
 import Script from "next/script";
 
 const Layout = ({ children }) => {

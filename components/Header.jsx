@@ -1,9 +1,8 @@
-import React, { useContext, Fragment } from "react";
+import React, { Fragment } from "react";
 import { Popover, Transition } from "@headlessui/react";
 import {
   BookmarkAltIcon,
   CalendarIcon,
-  CursorClickIcon,
   MenuIcon,
   PhoneIcon,
   PlayIcon,
@@ -15,10 +14,8 @@ import {
   InformationCircleIcon,
   FireIcon,
 } from "@heroicons/react/outline";
-import { ChevronDownIcon } from "@heroicons/react/solid";
 import Link from "next/link";
-import MenuPopOver from "./MenuPopOver";
-import MobilMenu from "./MobilMenu";
+import { MenuPopOver, MobilMenu } from "./";
 
 const sdh = [
   {

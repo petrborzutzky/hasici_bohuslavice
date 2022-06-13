@@ -117,13 +117,8 @@ function technika() {
         <li>Celková hmotnost: 22 500kg</li>
       </ul>
 
-
-      <h2 className="text-xl mt-10 mb-3 text-center">
-        Avie A31 DA12
-      </h2>
-      <p className="text-center text-red-800">
-        Užíváno v letech 1985-2017.
-      </p>
+      <h2 className="text-xl mt-10 mb-3 text-center">Avie A31 DA12</h2>
+      <p className="text-center text-red-800">Užíváno v letech 1984-2017.</p>
       <div className="container relative w-full h-64 shadow-lg mt-10 mb-10 hover:shadow-2xl">
         <Link href="/avie.jpg" className="cursor-pointer">
           <Image
@@ -136,13 +131,12 @@ function technika() {
         </Link>
       </div>
 
-      <p className="mb-5">
-        Dopravní automobil na podvozku Avie A 31
-      </p>
+      <p className="mb-5">Dopravní automobil na podvozku Avie A 31</p>
       <h2 className="mb-5 text-xl">Parametry:</h2>
       <ul className="list-disc ml-10 mb-5">
         <li>
-          Motor: vznětový, naftový, čtyřdobý, řadový, kapalinou chlazený čtyřválec o výkonu 60kW
+          Motor: vznětový, naftový, čtyřdobý, řadový, kapalinou chlazený
+          čtyřválec o výkonu 60kW
         </li>
         <li>Převodovka: 4 stupně vpřed, 1 vzad</li>
         <li>Délka: 5,75m</li>

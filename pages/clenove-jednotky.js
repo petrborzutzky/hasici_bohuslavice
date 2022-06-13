@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Avatar from "../components/Avatar";
+import { Avatar } from "../components";
 
 function clenove() {
   return (
@@ -10,10 +10,7 @@ function clenove() {
         Členové výjezdové jednotky - JSDH Bohuslavice
       </h2>
       <div className="flex justify-evenly gap-5 flex-wrap">
-        <Avatar
-          name="Jan Manusch"
-          functions="Velitel jednotky, NDT"
-        />
+        <Avatar name="Jan Manusch" functions="Velitel jednotky, NDT" />
         <Avatar name="Petr Kubík" functions="Velitel družstva, NDT, pilař" />
         <Avatar
           name="David Zajíček"

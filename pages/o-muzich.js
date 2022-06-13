@@ -1,6 +1,5 @@
 import React from "react";
-import Link from "next/link";
-import Avatar from "../components/Avatar";
+import { Avatar } from "../components";
 
 function OMuzich() {
   return (
