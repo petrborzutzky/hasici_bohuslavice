@@ -7,12 +7,32 @@ function OMuzich() {
       <h1 className="text-2xl text-center mb-5">Můžský tým</h1>
       <h3 className="text-lg font-bold mb-5">Členové</h3>
       <div className="flex justify-evenly gap-5 flex-wrap mb-5">
-        <Avatar name="Jaroslav Kubík" functions="Rozdělovač" />
-        <Avatar name="Jaroslav Černovský" functions="Mezispoj savic" />
-        <Avatar name="Lukáš Kučera" functions="Koš" />
-        <Avatar name="David Pašek" functions="Proudař" />
-        <Avatar name="David Kubík" functions="Proudař" />
-        <Avatar name="Matyáš Ďurina" functions="Proudař" />
+        <Avatar
+          name="Jaroslav Kubík"
+          functions="Rozdělovač"
+          photo="/avatars/20.jpg"
+        />
+        <Avatar
+          name="Jaroslav Černovský"
+          functions="Mezispoj savic"
+          photo="/avatars/26.jpg"
+        />
+        <Avatar name="Lukáš Kučera" functions="Koš" photo="/avatars/25.jpg" />
+        <Avatar
+          name="David Pašek"
+          functions="Proudař"
+          photo="/avatars/21.jpg"
+        />
+        <Avatar
+          name="David Kubík"
+          functions="Proudař"
+          photo="/avatars/13.jpg"
+        />
+        <Avatar
+          name="Matyáš Ďurina"
+          functions="Proudař"
+          photo="/avatars/02.jpg"
+        />
       </div>
 
       <h3 className="text-lg font-bold mb-5">Pro zájemce</h3>

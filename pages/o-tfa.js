@@ -18,13 +18,41 @@ function OTfa() {
 
       <h3 className="text-lg font-bold mb-5">Členové TFA Bohuslavice</h3>
       <div className="flex justify-evenly gap-5 flex-wrap mb-5">
-        <Avatar name="Adam Ryš" functions="nad 35 let" />
-        <Avatar name="David Pašek" functions="do 35 let" />
-        <Avatar name="Matyáš Ďurina" functions="do 35 let" />
-        <Avatar name="Silvie Ďurinová" functions="žena" />
-        <Avatar name="Nikol Miketová" functions="žena" />
-        <Avatar name="Jiří Lasák" functions="do 35 let" />
-        <Avatar name="Jiří Vitásek" functions="do 35 let" />
+        <Avatar
+          name="Adam Ryš"
+          functions="nad 35 let"
+          photo="/avatars/15.jpg"
+        />
+        <Avatar
+          name="David Pašek"
+          functions="do 35 let"
+          photo="/avatars/21.jpg"
+        />
+        <Avatar
+          name="Matyáš Ďurina"
+          functions="do 35 let"
+          photo="/avatars/02.jpg"
+        />
+        <Avatar
+          name="Silvie Ďurinová"
+          functions="žena"
+          photo="/avatars/22.jpg"
+        />
+        <Avatar
+          name="Nikol Miketová"
+          functions="žena"
+          photo="/avatars/07.jpg"
+        />
+        <Avatar
+          name="Jiří Lasák"
+          functions="do 35 let"
+          photo="/avatars/24.jpg"
+        />
+        <Avatar
+          name="Jiří Vitásek"
+          functions="do 35 let"
+          photo="/avatars/05.jpg"
+        />
       </div>
 
       <h3 className="text-lg font-bold mb-5">Pro zájemce</h3>
