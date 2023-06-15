@@ -1,29 +1,39 @@
-import React, { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import React, { Fragment } from 'react';
+import { Popover, Transition } from '@headlessui/react';
 
-import { ChevronDownIcon } from "@heroicons/react/solid";
-import Link from "next/link";
+import { ChevronDownIcon } from '@heroicons/react/solid';
+import Link from 'next/link';
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ');
 }
 
-const MenuPopOver = ({ titleMenu, childrenMenu }) => {
+export interface MenuPopOverProps {
+  titleMenu: string;
+  childrenMenu: {
+    name: string;
+    description: string;
+    href: string;
+    icon: any;
+  }[];
+}
+
+const MenuPopOver = ({ titleMenu, childrenMenu }: MenuPopOverProps) => {
   return (
     <Popover className="relative">
       {({ open }) => (
         <>
           <Popover.Button
             className={classNames(
-              open ? "text-red-800" : "text-gray-500",
-              "group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-red-800 focus:outline-none "
+              open ? 'text-red-800' : 'text-gray-500',
+              'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-red-800 focus:outline-none '
             )}
           >
             <span>{titleMenu}</span>
             <ChevronDownIcon
               className={classNames(
-                open ? "text-red-700" : "text-gray-400",
-                "ml-2 h-5 w-5 group-hover:text-red-800"
+                open ? 'text-red-700' : 'text-gray-400',
+                'ml-2 h-5 w-5 group-hover:text-red-800'
               )}
               aria-hidden="true"
             />

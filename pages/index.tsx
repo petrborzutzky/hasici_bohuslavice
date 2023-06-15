@@ -1,10 +1,25 @@
-import { PostCard } from "../components";
-import { getPosts } from "../services";
-import Link from "next/link";
+import { PostCard } from '../components';
+import { getPosts } from '../services';
+import Link from 'next/link';
+import React from 'react';
 
 const postPerPage = 5;
 
-export default function Home({ posts }) {
+export interface HomeProps {
+  posts: {
+    node: {
+      title: string;
+      excerpt: string;
+      slug: string;
+      featuredImage: {
+        url: string;
+      };
+      createdAt: string;
+    };
+  }[];
+}
+
+export default function Home({ posts }: HomeProps) {
   return (
     <>
       {posts.map((post, index) => (

@@ -1,5 +1,5 @@
-import React from "react";
-import { ContactMember, Sponsor } from "./footerComponents";
+import React from 'react';
+import { ContactMember, Sponsor } from './footerComponents';
 
 const Footer = () => {
   return (

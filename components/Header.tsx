@@ -1,140 +1,91 @@
-import React, { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import React, { Fragment } from 'react';
+import { Popover, Transition } from '@headlessui/react';
 import {
-  BookmarkAltIcon,
-  CalendarIcon,
   MenuIcon,
-  PhoneIcon,
-  PlayIcon,
-  ShieldCheckIcon,
-  SupportIcon,
   XIcon,
   TruckIcon,
   UsersIcon,
   InformationCircleIcon,
   FireIcon,
-} from "@heroicons/react/outline";
-import Link from "next/link";
-import { MenuPopOver, MobilMenu } from "./";
+} from '@heroicons/react/outline';
+import Link from 'next/link';
+import { MenuPopOver, MobilMenu } from '.';
 
 const sdh = [
   {
-    name: "O sboru",
-    description: "Informace o sboru, historie, atd.",
-    href: "o-sboru",
+    name: 'O sboru',
+    description: 'Informace o sboru, historie, atd.',
+    href: 'o-sboru',
     icon: InformationCircleIcon,
   },
   {
-    name: "Členové výboru",
-    description: "Seznam členů výboru SDH",
-    href: "clenove-vyboru",
+    name: 'Členové výboru',
+    description: 'Seznam členů výboru SDH',
+    href: 'clenove-vyboru',
     icon: UsersIcon,
   },
 ];
 const jsdh = [
   {
-    name: "Technika",
-    description: "Výjezdové vozidla a další technika",
-    href: "technika",
+    name: 'Technika',
+    description: 'Výjezdové vozidla a další technika',
+    href: 'technika',
     icon: TruckIcon,
   },
   {
-    name: "Členové jednotky",
-    description: "Seznam členů jednotky",
-    href: "clenove-jednotky",
+    name: 'Členové jednotky',
+    description: 'Seznam členů jednotky',
+    href: 'clenove-jednotky',
     icon: UsersIcon,
   },
 ];
 const mladiHasici = [
   {
-    name: "O mladých hasičích",
-    description: "Informace o mladých hasičích",
-    href: "o-mladych-hasicich",
+    name: 'O mladých hasičích',
+    description: 'Informace o mladých hasičích',
+    href: 'o-mladych-hasicich',
     icon: InformationCircleIcon,
   },
   {
-    name: "Soutěže",
-    description: "Informace o soutežích mladých hasičů",
-    href: "souteze-mh",
+    name: 'Soutěže',
+    description: 'Informace o soutežích mladých hasičů',
+    href: 'souteze-mh',
     icon: FireIcon,
   },
 ];
 
 const muzi = [
   {
-    name: "O týmu mužů",
-    description: "Informace o sportovním týmů mužů",
-    href: "o-muzich",
+    name: 'O týmu mužů',
+    description: 'Informace o sportovním týmů mužů',
+    href: 'o-muzich',
     icon: InformationCircleIcon,
   },
   {
-    name: "Soutěže",
-    description: "Informace o soutežích mužů",
-    href: "souteze-muzi",
+    name: 'Soutěže',
+    description: 'Informace o soutežích mužů',
+    href: 'souteze-muzi',
     icon: FireIcon,
   },
 ];
 
 const tfa = [
   {
-    name: "Tým TFA",
-    description: "Informace o sportovním týmů TFA",
-    href: "o-tfa",
+    name: 'Tým TFA',
+    description: 'Informace o sportovním týmů TFA',
+    href: 'o-tfa',
     icon: InformationCircleIcon,
   },
   {
-    name: "Soutěže",
-    description: "Informace o soutežích družstva TFA",
-    href: "souteze-tfa",
+    name: 'Soutěže',
+    description: 'Informace o soutežích družstva TFA',
+    href: 'souteze-tfa',
     icon: FireIcon,
   },
 ];
 
-const callsToAction = [
-  { name: "Watch Demo", href: "#", icon: PlayIcon },
-  { name: "Contact Sales", href: "#", icon: PhoneIcon },
-];
-const resources = [
-  {
-    name: "Help Center",
-    description:
-      "Get all of your questions answered in our forums or contact support.",
-    href: "#",
-    icon: SupportIcon,
-  },
-  {
-    name: "Guides",
-    description:
-      "Learn how to maximize our platform to get the most out of it.",
-    href: "#",
-    icon: BookmarkAltIcon,
-  },
-  {
-    name: "Events",
-    description:
-      "See what meet-ups and other events we might be planning near you.",
-    href: "#",
-    icon: CalendarIcon,
-  },
-  {
-    name: "Security",
-    description: "Understand how we take your privacy seriously.",
-    href: "#",
-    icon: ShieldCheckIcon,
-  },
-];
-const recentPosts = [
-  { id: 1, name: "Boost your conversion rate", href: "#" },
-  {
-    id: 2,
-    name: "How to use search engine optimization to drive traffic to your site",
-    href: "#",
-  },
-  { id: 3, name: "Improve your customer experience", href: "#" },
-];
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ');
 }
 
 const Header = () => {
@@ -143,7 +94,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-2 lg:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="/" alt="Hasiči Bohuslavice">
+            <Link href="/">
               <span className="flex items-center cursor-pointer">
                 <img
                   className="h-10 w-auto transition-transform sm:scale-100 sm:pl-4 sm:h-20"
@@ -197,7 +148,7 @@ const Header = () => {
                     className="h-8 mr-5 inline w-auto"
                     src="../logo.png"
                     alt="Hasiči Bohuslavice"
-                  />{" "}
+                  />{' '}
                   Hasiči Bohuslavice
                 </div>
                 <div className="-mr-2">

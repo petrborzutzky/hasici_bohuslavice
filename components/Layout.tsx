@@ -1,9 +1,12 @@
-import React from "react";
-import { Header, Footer, FacebookWidget } from "./";
-import Head from "next/head";
-import Script from "next/script";
+import React from 'react';
+import { Header, Footer, FacebookWidget } from '.';
+import Head from 'next/head';
 
-const Layout = ({ children }) => {
+export interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />

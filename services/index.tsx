@@ -1,8 +1,8 @@
-import { request, gql } from "graphql-request";
+import { request, gql } from 'graphql-request';
 
-const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
+const graphqlAPI: string = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT as string;
 
-export const getPosts = async (limit, offset) => {
+export const getPosts = async (limit: number, offset: number) => {
   const query = gql`
     query GetPosts($limit: Int!, $offset: Int!) {
       postsConnection(orderBy: createdAt_DESC, first: $limit, skip: $offset) {
@@ -42,10 +42,10 @@ export const getPostsAll = async () => {
     }
   }`;
   const result = await request(graphqlAPI, query, {});
-  return result.postsConnection.edges;
+  return result.postsConnection.edges.map((post: any) => post.node);
 };
 
-export const getPagesCount = async (postPerPage) => {
+export const getPagesCount = async (postPerPage: number) => {
   const query = gql`
   query GetPostsCount() {
     postsConnection() {
@@ -65,7 +65,7 @@ export const getPagesCount = async (postPerPage) => {
   return pagesCount;
 };
 
-export const getPostDetails = async (slug) => {
+export const getPostDetails = async (slug: string) => {
   const query = gql`
     query GetPostDetails($slug: String!) {
       post(where: { slug: $slug }) {

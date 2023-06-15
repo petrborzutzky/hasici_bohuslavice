@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { FacebookProvider, Feed, Page } from "react-facebook";
-import Script from "next/script";
+import React, { useEffect, useState } from 'react';
+//import { FacebookProvider, Feed, Page } from "react-facebook";
+//import Script from "next/script";
 
 const FacebookWidget = React.memo((props) => {
   useEffect(() => {
-    const script = document.createElement("script");
+    const script = document.createElement('script');
 
     script.src =
-      "https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v13.0&appId=601068137590863&autoLogAppEvents=1";
+      'https://connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v13.0&appId=601068137590863&autoLogAppEvents=1';
     script.async = false;
     script.defer = true;
-    script.crossOrigin = "anonymous";
-    script.nonce = "pCP3EiIk";
+    script.crossOrigin = 'anonymous';
+    script.nonce = 'pCP3EiIk';
 
     document.body.appendChild(script);
 
@@ -54,7 +54,6 @@ const FacebookWidget = React.memo((props) => {
           </div>
           
               </>*/}
-      {}
       <div
         className="fb-page"
         data-href="https://www.facebook.com/hasiciBohuslavice"

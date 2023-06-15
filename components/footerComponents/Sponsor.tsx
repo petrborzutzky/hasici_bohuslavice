@@ -1,7 +1,13 @@
-import React from "react";
-import Link from "next/link";
+import React from 'react';
+import Link from 'next/link';
 
-const Sponsor = ({ href, height, source, altText }) => {
+export interface SponsorProps {
+  href: string;
+  height: string;
+  source: string;
+  altText: string;
+}
+const Sponsor = ({ href, height, source, altText }: SponsorProps) => {
   return (
     <Link href={href}>
       <span className="cursor-pointer transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300">

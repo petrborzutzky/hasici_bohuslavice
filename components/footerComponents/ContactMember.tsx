@@ -1,13 +1,27 @@
-import React from "react";
-import Link from "next/link";
-import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
-import { SocialIcon } from "react-social-icons";
-import { useState } from "react";
+import React from 'react';
+import Link from 'next/link';
+import { MailIcon, PhoneIcon } from '@heroicons/react/outline';
+import { SocialIcon } from 'react-social-icons';
+import { useState } from 'react';
 
-const ContactMember = ({ title, name, phone, mail, facebook }) => {
-  const [fColor, setfColor] = useState("white");
-  const [bColor, setbColor] = useState("transparent");
-  const phoneWithoutSpace = phone.replace(/ /g, "");
+export interface ContactMemberProps {
+  title: string;
+  name: string;
+  phone: string;
+  mail: string;
+  facebook?: string;
+}
+
+const ContactMember = ({
+  title,
+  name,
+  phone,
+  mail,
+  facebook,
+}: ContactMemberProps) => {
+  const [fColor, setfColor] = useState('white');
+  const [bColor, setbColor] = useState('transparent');
+  const phoneWithoutSpace = phone.replace(/ /g, '');
 
   return (
     <div>
@@ -38,16 +52,16 @@ const ContactMember = ({ title, name, phone, mail, facebook }) => {
           fgColor={bColor}
           className="mt-3"
           onMouseOver={() => {
-            setfColor("#60A5FA");
-            setbColor("white");
+            setfColor('#60A5FA');
+            setbColor('white');
           }}
           onMouseLeave={() => {
-            setfColor("white");
-            setbColor("transparent");
+            setfColor('white');
+            setbColor('transparent');
           }}
         />
       ) : (
-        ""
+        ''
       )}
     </div>
   );

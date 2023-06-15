@@ -1,7 +1,5 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-import { Avatar } from "../components";
+import React from 'react';
+import { Avatar } from '../components';
 
 function clenove() {
   return (

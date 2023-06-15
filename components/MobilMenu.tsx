@@ -1,8 +1,17 @@
-import React from "react";
-import Link from "next/link";
-import { Popover } from "@headlessui/react";
+import React from 'react';
+import Link from 'next/link';
+import { Popover } from '@headlessui/react';
 
-const MobilMenu = ({ titleMenu, childrenMenu }) => {
+export interface MobilMenuProps {
+  titleMenu: string;
+  childrenMenu: {
+    name: string;
+    href: string;
+    icon: any;
+  }[];
+}
+
+const MobilMenu = ({ titleMenu, childrenMenu }: MobilMenuProps) => {
   return (
     <>
       <span className="mb-1">{titleMenu}</span>

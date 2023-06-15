@@ -1,7 +1,6 @@
-import React from "react";
-import Image from "next/image";
-import Link from "next/link";
-
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 function OmladychHasicich() {
   return (
@@ -9,7 +8,7 @@ function OmladychHasicich() {
       <h1 className="text-2xl text-center mb-5">Mladí hasiči</h1>
       <h3 className="text-lg font-bold mb-5">Tréninky</h3>
       <p className="mb-10">
-        Naše družstvo mladých hasičů má pravidelné tréninky{" "}
+        Naše družstvo mladých hasičů má pravidelné tréninky{' '}
         <strong>ve středu v 17:00</strong>. Trénujeme na hrišti SK Bohuslavice.
         Při nepříznivém počasí na Hasičské zbrojnici. V zimě trénink probíha v
         tělocvične ZŠ Bohuslavice.

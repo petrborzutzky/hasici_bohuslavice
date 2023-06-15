@@ -1,9 +1,21 @@
-import React from "react";
-import moment from "moment";
-import Link from "next/link";
-import { CalendarIcon } from "@heroicons/react/outline";
+import React from 'react';
+import moment from 'moment';
+import Link from 'next/link';
+import { CalendarIcon } from '@heroicons/react/outline';
 
-const PostCard = ({ post }) => {
+export interface PostCardProps {
+  post: {
+    title: string;
+    excerpt: string;
+    slug: string;
+    featuredImage: {
+      url: string;
+    };
+    createdAt: string;
+  };
+}
+
+const PostCard = ({ post }: PostCardProps) => {
   return (
     <Link href={`/clanky/${post.slug}`}>
       <div className="bg-white h-min-full mb-10 shadow-lg cursor-pointer hover:text-red-700 hover:shadow-xl">
@@ -16,7 +28,7 @@ const PostCard = ({ post }) => {
         <p className="p-5 mb-5 text-center">{post.excerpt}</p>
         <div className="pb-5 text-center">
           <CalendarIcon className="w-5 inline-block mb-1 mr-2 text-red-800" />
-          {moment(post.createdAt).format("DD. MM. YYYY")}
+          {moment(post.createdAt).format('DD. MM. YYYY')}
         </div>
       </div>
     </Link>
