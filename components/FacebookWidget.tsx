@@ -20,13 +20,13 @@ const FacebookWidget = React.memo((props) => {
     };
   }, []);
 
-  const [isDisplayed, setIsDisplayed] = useState(false);
+  /*const [isDisplayed, setIsDisplayed] = useState(false);
 
   useEffect(() => {
     setInterval(() => {
       setIsDisplayed(true);
     }, 3000);
-  }, []);
+  }, []);*/
 
   return (
     <>
