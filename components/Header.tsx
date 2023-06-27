@@ -99,7 +99,7 @@ const Header = () => {
                 <img
                   className="h-10 w-auto transition-transform sm:scale-100 sm:pl-4 sm:h-20"
                   src="../logo.png"
-                  alt="Hasiči Bohuslavice"
+                  alt="Znak Hasiči Bohuslavice"
                 />
                 <span className="ml-5 text-2xl">Hasiči Bohuslavice</span>
               </span>

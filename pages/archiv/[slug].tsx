@@ -21,7 +21,7 @@ export interface HomeProps {
   pagesCount: number;
 }
 
-export default function Home({ posts, pagesCount }: HomeProps) {
+export default function Archiv({ posts, pagesCount }: HomeProps) {
   return (
     <>
       {posts.map((post, index) => (

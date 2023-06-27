@@ -26,9 +26,9 @@ export default function Home({ posts }: HomeProps) {
         <PostCard post={post.node} key={post.node.title} />
       ))}
       <div className="float-right">
-        <Link href="/archiv/1">
+        <Link href="/archiv/2">
           <span className="hover:text-red-700 text-blue-400 cursor-pointer underline mx-5">
-            Archív článků
+            Další články...
           </span>
         </Link>
       </div>

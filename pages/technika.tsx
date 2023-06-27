@@ -15,6 +15,7 @@ function technika() {
             objectFit="cover"
             objectPosition="center 60%"
             className="cursor-pointer"
+            alt="Hasičská cisterna Scania na poli"
           />
         </Link>
       </div>
@@ -53,6 +54,7 @@ function technika() {
             objectFit="cover"
             objectPosition="center 60%"
             className="cursor-pointer"
+            alt="Hasičský vůz Mercedes-Benz Sprinter před hasičskou zbrojnicí"
           />
         </Link>
       </div>
@@ -94,6 +96,7 @@ function technika() {
             objectFit="cover"
             objectPosition="center 60%"
             className="cursor-pointer"
+            alt="Hasičská cisterna Tatra 815 u hasičské zbrojnice"
           />
         </Link>
       </div>
@@ -127,6 +130,7 @@ function technika() {
             objectFit="cover"
             objectPosition="center 60%"
             className="cursor-pointer"
+            alt="Hasičský vůz Avie A31 u hasičské zbrojnice"
           />
         </Link>
       </div>

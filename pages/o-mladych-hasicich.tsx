@@ -22,6 +22,7 @@ function OmladychHasicich() {
             objectFit="cover"
             objectPosition="center 60%"
             className="cursor-pointer"
+            alt="Družstvo mladých hasičů na soutěži před hasičskou dodávkou"
           />
         </Link>
       </div>
