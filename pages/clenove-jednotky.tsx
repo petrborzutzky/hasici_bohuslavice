@@ -53,14 +53,10 @@ function clenove() {
         <Avatar name="Jiří Lasák" functions="NDT" photo="/avatars/24.jpg" />
         <Avatar name="Jaroslav Kubík" functions="NDT" photo="/avatars/20.jpg" />
         <Avatar name="Ladislav Šimoník" functions="NDT" />
-        <Avatar
-          name="Lukáš Kučera"
-          functions="Rookie"
-          photo="/avatars/25.jpg"
-        />
+        <Avatar name="Lukáš Kučera" functions="NDT" photo="/avatars/25.jpg" />
         <Avatar
           name="Jaroslav Černovský"
-          functions="Rookie"
+          functions="NDT"
           photo="/avatars/26.jpg"
         />
       </div>
