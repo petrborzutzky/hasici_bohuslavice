@@ -54,7 +54,7 @@ const PostDetails = ({ post }: PostDetailsProps) => {
           ol: ({ children }) => (
             <ol className="list-decimal ml-10 mb-5">{children}</ol>
           ),
-          a: ({ children, href, title }) => (
+          a: ({ children, href }) => (
             <a
               href={href}
               className="underline text-blue-400 hover:text-red-700"
