@@ -52,9 +52,9 @@ const Footer = () => {
       <div className="w-full flex bg-stone-600 flex-wrap justify-center text-center gap-20 text-white p-5">
         <ContactMember
           title="Starosta Sdh"
-          name="Antonín Blokša"
-          phone="+420 606 452 567"
-          mail="bloksatonda@seznam.cz"
+          name="Adam Ryš"
+          phone="+420 602 777 691"
+          mail="adamrys@seznam.cz"
         />
         <ContactMember
           title="Velitel jednotky"

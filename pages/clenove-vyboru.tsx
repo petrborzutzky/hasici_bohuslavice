@@ -9,14 +9,9 @@ function clenove() {
       </h2>
       <div className="flex justify-evenly gap-5 flex-wrap">
         <Avatar
-          name="Antonín Blokša"
+          name="Adam Ryš"
           functions="Starosta sboru"
-          photo="/avatars/16.jpg"
-        />
-        <Avatar
-          name="Robert Lasák"
-          functions="Jednatel"
-          photo="/avatars/17.jpg"
+          photo="/avatars/15.jpg"
         />
         <Avatar
           name="Petr Kubík"
@@ -29,39 +24,23 @@ function clenove() {
           photo="/avatars/14.jpg"
         />
         <Avatar
-          name="Silvie Ďurinová"
-          functions="Vedoucí mládeže"
-          photo="/avatars/22.jpg"
+          name="Petr Borzutzký"
+          functions="Jednatel"
+          photo="/avatars/01.jpg"
         />
-        <Avatar
-          name="Jana Vitásková"
-          functions="Revizor"
-          photo="/avatars/10.jpg"
-        />
-        <Avatar
-          name="Anna Sněhotová"
-          functions="Hospodář"
-          photo="/avatars/04.jpg"
-        />
-        <Avatar
-          name="David Zajíček"
-          functions="Org. referent sboru"
-          photo="/avatars/03.jpg"
-        />
-        <Avatar
-          name="David Kubík"
-          functions="Člen výboru"
-          photo="/avatars/11.jpg"
-        />
+        <Avatar name="Ondřej Zedníček" functions="Hospodář" />
+
+        <Avatar name="Heidutzková Ester" functions="Vedoucí mládeže" />
         <Avatar
           name="David Vitásek"
           functions="Strojník"
           photo="/avatars/19.jpg"
         />
+
         <Avatar
-          name="Adam Ryš"
-          functions="Referent ochrany obyvatelstva"
-          photo="/avatars/15.jpg"
+          name="David Zajíček"
+          functions="Org. referent sboru"
+          photo="/avatars/03.jpg"
         />
         <Avatar
           name="Jiří Lasák"
@@ -69,35 +48,44 @@ function clenove() {
           photo="/avatars/24.jpg"
         />
         <Avatar
+          name="Jiří Vitásek"
+          functions="Referent ochrany obyvatel"
+          photo="/avatars/05.jpg"
+        />
+
+        <Avatar name="Lucie Gazdová" functions="Kronikář" />
+        <Avatar
+          name="Pavel Gazda"
+          functions="Referent MTZ"
+          photo="/avatars/08.jpg"
+        />
+        <Avatar
           name="Jaroslav Kubík"
           functions="Člen výboru"
           photo="/avatars/20.jpg"
         />
         <Avatar
-          name="Jarmila Blokšová"
-          functions="Kronikář"
-          photo="/avatars/23.jpg"
-        />
-        <Avatar
-          name="Pavel Gazda"
+          name="David Kubík"
           functions="Člen výboru"
-          photo="/avatars/08.jpg"
+          photo="/avatars/11.jpg"
         />
         <Avatar
-          name="Zdeněk Tomíček"
+          name="Silvie Ďurinová"
           functions="Člen výboru"
-          photo="/avatars/12.jpg"
+          photo="/avatars/22.jpg"
         />
         <Avatar
-          name="Kateřina Plevová"
-          functions="Referentka žen"
-          photo="/avatars/06.jpg"
-        />
-        <Avatar
-          name="Petr Borzutzký"
+          name="Matiáš Ďurina"
           functions="Člen výboru"
-          photo="/avatars/01.jpg"
+          photo="/avatars/02.jpg"
         />
+        <Avatar
+          name="Lukáš Kučera"
+          functions="Člen výboru"
+          photo="/avatars/25.jpg"
+        />
+
+        <Avatar name="Tomáš Dominik" functions="Revizor" />
       </div>
     </div>
   );
