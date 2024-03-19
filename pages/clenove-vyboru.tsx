@@ -75,7 +75,7 @@ function clenove() {
           photo="/avatars/22.jpg"
         />
         <Avatar
-          name="Matiáš Ďurina"
+          name="Matyáš Ďurina"
           functions="Člen výboru"
           photo="/avatars/02.jpg"
         />
