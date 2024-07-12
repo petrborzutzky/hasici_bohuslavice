@@ -15,8 +15,8 @@ export default function FinnishTable({
           <tr className={women ? 'bg-red-200' : 'bg-blue-200'}>
             <th className="py-2 px-2 sm:px-5 sm:text-center text-left">Poř.</th>
             <th className="py-2 px-2 text-left">Soutěžící</th>
-            <th className="py-2 px-5">LP</th>
-            <th className="py-2 px-5">PP</th>
+            <th className="py-2 px-6">LP</th>
+            <th className="py-2 px-6">PP</th>
             <th className="py-2 sm:px-5 pr-2 pl-9 text-right">
               Čas<span className="invisible inline">ss</span>
             </th>
