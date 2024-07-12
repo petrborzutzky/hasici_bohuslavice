@@ -17,7 +17,7 @@ export default function FinnishTable({
             <th className="py-2 px-2 text-left">Soutěžící</th>
             <th className="py-2 px-5">LP</th>
             <th className="py-2 px-5">PP</th>
-            <th className="py-2 sm:px-5 px-2 pl-9 text-right">
+            <th className="py-2 sm:px-5 pr-2 pl-9 text-right">
               Čas<span className="invisible inline">ss</span>
             </th>
           </tr>
@@ -33,7 +33,7 @@ export default function FinnishTable({
                     : 'odd:bg-white bg-blue-50 hover:bg-blue-400 border-b-2'
                 }
               >
-                <td className="font-bold text-left px-2 sm:px-5 sm:text-center">
+                <td className="font-bold text-left pl-2 sm:px-5 sm:text-center text-nowrap">
                   <span className="hidden sm:inline">
                     {row[0] === '1.' ? '🏆' : ''}
                   </span>
@@ -52,15 +52,15 @@ export default function FinnishTable({
                   {row[1]}
                   {row[2] === 'ŽENY' ? ' (Ž)' : ''}
                 </td>
-                <td className="text-xs border-x px-2">
+                <td className="text-xs border-x px-1">
                   {row[3]}{' '}
                   <span className="text-gray-500">{secondRemover(row[3])}</span>
                 </td>
-                <td className=" text-xs border-x px-2">
+                <td className="text-xs border-x px-1">
                   {row[4]}
                   <span className="text-gray-500">{secondRemover(row[4])}</span>
                 </td>
-                <td className="font-bold sm:px-5 px-2 text-right">
+                <td className="font-bold sm:px-5 px-2 text-right text-nowrap">
                   {row[5]}{' '}
                   <span className="text-gray-500 font-normal">
                     {secondRemover(row[5])}

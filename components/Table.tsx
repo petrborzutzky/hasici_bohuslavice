@@ -14,12 +14,12 @@ export function StartTable({
   startTime.setMinutes(startTime.getMinutes() - duration);
   return (
     <>
-      <table className="mx-auto shadow-lg text-xs sm:text-base">
+      <table className="mx-auto shadow-lg text-xs sm:text-base min-w-full sm:min-w-0">
         <thead>
           <tr>
-            <th className="py-2 px-5 text-left">Start. pořadí</th>
-            <th className="py-2 px-5 text-left">Na základně</th>
-            <th className="py-2 px-5 text-left">Soutěžící</th>
+            <th className="py-2 sm:px-5 px-2 text-left">Start. pořadí</th>
+            <th className="py-2 sm:px-5 px-2 text-left">Na základně</th>
+            <th className="py-2 sm:px-5 px-2 text-left">Soutěžící</th>
           </tr>
         </thead>
         <tbody className="text-center font-mono">
@@ -35,17 +35,17 @@ export function StartTable({
                     : 'bg-blue-200 hover:bg-blue-400'
                 }
               >
-                <td className="py-2 px-5 border text-left">
+                <td className="py-2 sm:px-5 px-2 border text-left">
                   {i + 1 + menTableLength + womenTableLength}.
                 </td>
-                <td className="py-2 px-5 border text-left">
+                <td className="py-2 sm:px-5 px-2 border text-left">
                   {startTime.getHours() +
                     ':' +
                     (startTime.getMinutes() < 10 ? '0' : '') +
                     startTime.getMinutes() +
                     ' h'}
                 </td>
-                <td className="text-left py-2 px-5 border">
+                <td className="text-left py-2 sm:px-5 px-2 border">
                   {row[1]}
                   {row[2] === 'ŽENY' ? ' (Ž)' : ''}
                 </td>
