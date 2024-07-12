@@ -20,7 +20,7 @@ export default function FinnishTable({
             <th className="py-2 px-5 text-right">Výsledný čas</th>
           </tr>
         </thead>
-        <tbody className="text-center">
+        <tbody className="text-center font-mono">
           {table.map((row: any, i: number) => {
             return (
               <tr

@@ -7,6 +7,7 @@ import { UsersRowData } from '../lib/definitions';
 
 const myCache = new NodeCache({ stdTTL: 60, checkperiod: 60 });
 const START_DATE = '2024-07-21 15:00:00';
+const DURATION = 5; // 5 min duration between teams
 
 async function fetchData() {
   const serviceAccountAuth = new JWT({
@@ -79,22 +80,22 @@ export default function TabulkaNocni2024({ data }: any) {
   //console.log(data);
   const time = new Date(START_DATE.split(' ')[0] + ' ' + lastRun);
   startTime.setTime(time.getTime());
-  startTime.setMinutes(startTime.getMinutes() - 4);
-
   menTable = sortTable(menTable);
   womenTable = sortTable(womenTable);
 
   return (
     <>
-      <h1 className="text-2xl sm:mb-20 mb-10 text-center">
-        Memorial Rudolfa Šebestíka - 2024
+      <h1 className="text-2xl text-center">
+        Memoriál Rudolfa Šebestíka - 2024
       </h1>
+      <h3 className="text-lg sm:mb-10 mb-10 mt-2 text-center">XXXI. ročník</h3>
       {startTable.length !== 0 && (
         <StartTable
           startTime={startTime}
           startTable={startTable}
           menTableLength={menTable.length}
           womenTableLength={womenTable.length}
+          duration={DURATION}
         />
       )}
 

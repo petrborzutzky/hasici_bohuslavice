@@ -3,11 +3,17 @@ export function StartTable({
   startTable,
   menTableLength,
   womenTableLength,
-}: any) {
+  duration,
+}: {
+  startTime: Date;
+  startTable: any;
+  menTableLength: number;
+  womenTableLength: number;
+  duration: number;
+}) {
+  startTime.setMinutes(startTime.getMinutes() - duration);
   return (
     <>
-      <h2 className="text-xl mb-5 text-center">Startovní pořadí</h2>
-
       <table className="mx-auto shadow-lg">
         <thead>
           <tr>
@@ -16,9 +22,9 @@ export function StartTable({
             <th className="py-2 px-5 text-left">Soutěžící</th>
           </tr>
         </thead>
-        <tbody className="text-center">
+        <tbody className="text-center font-mono">
           {startTable.map((row: any, i: number) => {
-            startTime.setMinutes(startTime.getMinutes() + 6);
+            startTime.setMinutes(startTime.getMinutes() + duration);
 
             return (
               <tr
@@ -106,6 +112,12 @@ export function compareTimes(time1: string, time2: string) {
   // Pokud je čas1 mezi půlnocí a 6:00 a čas2 mezi 18:00 a půlnocí, přičteme 24 hodin k čas1
   if (seconds1 < 6 * 3600 && seconds2 > 18 * 3600) {
     if (seconds1 + 24 * 3600 - seconds2 > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  } else {
+    if (seconds1 - seconds2 > 0) {
       return true;
     } else {
       return false;
