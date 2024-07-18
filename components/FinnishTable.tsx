@@ -2,21 +2,23 @@ export default function FinnishTable({
   table,
   title,
   women,
+  zadek = false,
 }: {
   table: any;
   title: string;
   women?: boolean;
+  zadek?: boolean;
 }) {
   return (
     <>
       <h2 className="text-xl mb-10 text-center mt-20">{title}</h2>
-      <table className="min-w-full text-xs sm:text-base shadow-lg">
+      <table className="min-w-full text-xs sm:text-base shadow-lg mx-auto sm:min-w-0">
         <thead>
           <tr className={women ? 'bg-red-200' : 'bg-blue-200'}>
             <th className="py-2 px-2 sm:px-5 sm:text-center text-left">Poř.</th>
             <th className="py-2 px-2 text-left">Soutěžící</th>
-            <th className="py-2 px-6">LP</th>
-            <th className="py-2 px-6">PP</th>
+            {!zadek && <th className="py-2">LP</th>}
+            {!zadek && <th className="py-2">PP</th>}
             <th className="py-2 sm:px-5 pr-2 pl-9 text-right">
               Čas<span className="invisible inline">ss</span>
             </th>
@@ -33,7 +35,7 @@ export default function FinnishTable({
                     : 'odd:bg-white bg-blue-50 hover:bg-blue-400 border-b-2'
                 }
               >
-                <td className="font-bold text-left pl-2 sm:px-5 sm:text-center text-nowrap">
+                <td className="font-bold text-left pl-2 sm:px-5 sm:text-center whitespace-nowrap">
                   <span className="hidden sm:inline">
                     {row[0] === '1.' ? '🏆' : ''}
                   </span>
@@ -52,15 +54,24 @@ export default function FinnishTable({
                   {row[1]}
                   {row[2] === 'ŽENY' ? ' (Ž)' : ''}
                 </td>
-                <td className="text-xs border-x px-1">
-                  {row[3]}{' '}
-                  <span className="text-gray-500">{secondRemover(row[3])}</span>
-                </td>
-                <td className="text-xs border-x px-1">
-                  {row[4]}
-                  <span className="text-gray-500">{secondRemover(row[4])}</span>
-                </td>
-                <td className="font-bold sm:px-5 px-2 text-right text-nowrap">
+                {!zadek && (
+                  <td className="text-xs border-x px-1 whitespace-nowrap">
+                    {row[3]}{' '}
+                    <span className="text-gray-500">
+                      {secondRemover(row[3])}
+                    </span>
+                  </td>
+                )}
+                {!zadek && (
+                  <td className="text-xs border-x px-1 whitespace-nowrap">
+                    {row[4]}
+                    <span className="text-gray-500">
+                      {secondRemover(row[4])}
+                    </span>
+                  </td>
+                )}
+
+                <td className="font-bold sm:px-5 px-2 text-right whitespace-nowrap">
                   {row[5]}{' '}
                   <span className="text-gray-500 font-normal">
                     {secondRemover(row[5])}

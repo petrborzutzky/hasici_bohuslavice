@@ -3,12 +3,11 @@ import { JWT } from 'google-auth-library';
 import NodeCache from 'node-cache';
 import FinnishTable from '../components/FinnishTable';
 import { StartTable, compareTimes, sortTable } from '../components/Table';
-import { UsersRowData } from '../lib/definitions';
-import Link from 'next/link';
+import { UsersRowDataZadek } from '../lib/definitions';
 
-const myCache = new NodeCache({ stdTTL: 60, checkperiod: 60 });
-const START_DATE = '2024-07-21 15:00:00';
-const DURATION = 5; // 5 min duration between teams
+const myCache = new NodeCache({ stdTTL: 10, checkperiod: 10 });
+const START_DATE = '2024-07-21 17:00:00';
+const DURATION = 3; // 5 min duration between teams
 
 async function fetchData() {
   const serviceAccountAuth = new JWT({
@@ -23,9 +22,9 @@ async function fetchData() {
   );
 
   await doc.loadInfo();
-  const sheet = doc.sheetsByIndex[0];
+  const sheet = doc.sheetsByIndex[1];
   sheet.loadHeaderRow(2);
-  const userRows = await sheet.getRows<UsersRowData>({
+  const userRows = await sheet.getRows<UsersRowDataZadek>({
     limit: 50,
   });
 
@@ -33,8 +32,8 @@ async function fetchData() {
     row.get('Star. poz.') ? row.get('Star. poz.') : null,
     row.get('TÝM') ? row.get('TÝM') : null,
     row.get('Pohlaví') ? row.get('Pohlaví') : null,
-    row.get('LP') ? row.get('LP') : null,
-    row.get('PP') ? row.get('PP') : null,
+    row.get('Čas 1') ? row.get('Čas 1') : null,
+    row.get('Čas 2') ? row.get('Čas 2') : null,
     row.get('VÝSLEDNÝ ČAS') ? row.get('VÝSLEDNÝ ČAS') : null,
     row.get('PRŮBĚŽNÉ UMÍSTĚNÍ') ? row.get('PRŮBĚŽNÉ UMÍSTĚNÍ') : null,
     row.get('Odběhnuto') ? row.get('Odběhnuto') : null,
@@ -42,17 +41,17 @@ async function fetchData() {
 }
 
 export async function getServerSideProps() {
-  let data = myCache.get('tabulkaDenni2024');
+  let data = myCache.get('tabulkaDenniZadek2024');
   if (!data) {
     data = await fetchData();
 
-    myCache.set('tabulkaDenni2024', data);
+    myCache.set('tabulkaDenniZadek2024', data);
   }
 
   return { props: { data } };
 }
 
-export default function TabulkaNocni2024({ data }: any) {
+export default function TabulkaDenniZadek2024({ data }: any) {
   const startTime = new Date(START_DATE);
   let lastRun = START_DATE.split(' ')[1];
   const startTable = [];
@@ -89,8 +88,9 @@ export default function TabulkaNocni2024({ data }: any) {
       <h1 className="text-2xl text-center">
         Memoriál Rudolfa Šebestíka - 2024
       </h1>
-      <h3 className="text-lg sm:mb-10 mb-10 mt-2 text-center">XXXI. ročník</h3>
-
+      <h3 className="text-lg sm:mb-10 mb-10 mt-2 text-center">
+        O nejrychlejší zadek.
+      </h3>
       {startTable.length !== 0 && (
         <StartTable
           startTime={startTime}
@@ -102,23 +102,17 @@ export default function TabulkaNocni2024({ data }: any) {
       )}
 
       {menTable.length !== 0 && (
-        <FinnishTable table={menTable} title="Muži - Průběžné výsledky" />
+        <FinnishTable table={menTable} zadek title="Muži - Průběžné výsledky" />
       )}
 
       {womenTable.length !== 0 && (
         <FinnishTable
+          zadek
           table={womenTable}
           title="Ženy - Průběžné výsledky"
           women
         />
       )}
-      <div className="flex justify-center mt-10">
-        <Link href="/o-nejrychlejsi-zadek-2024">
-          <span className="hover:text-blue-600 text-blue-400 cursor-pointer underline">
-            O nejrychlejší zadek - tabulka
-          </span>
-        </Link>
-      </div>
     </>
   );
 }
