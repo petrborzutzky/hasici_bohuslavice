@@ -5,7 +5,7 @@ import FinnishTable from '../components/FinnishTable';
 import { StartTable, compareTimes, sortTable } from '../components/Table';
 import { UsersRowDataZadek } from '../lib/definitions';
 
-const myCache = new NodeCache({ stdTTL: 10, checkperiod: 10 });
+const myCache = new NodeCache({ stdTTL: 60, checkperiod: 60 });
 const START_DATE = '2024-07-21 17:00:00';
 const DURATION = 3; // 5 min duration between teams
 
