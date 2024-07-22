@@ -101,14 +101,21 @@ export default function TabulkaNocni2024({ data }: any) {
         />
       )}
 
-      {menTable.length !== 0 && (
-        <FinnishTable table={menTable} title="Muži - Průběžné výsledky" />
+     {menTable.length !== 0 && (
+        <FinnishTable
+          table={menTable}
+          title={`Muži - ${
+            startTable.length === 0 ? 'Konečné' : 'Průběžné'
+          } výsledky`}
+        />
       )}
 
       {womenTable.length !== 0 && (
         <FinnishTable
           table={womenTable}
-          title="Ženy - Průběžné výsledky"
+          title={`Ženy - ${
+            startTable.length === 0 ? 'Konečné' : 'Průběžné'
+          } výsledky`}
           women
         />
       )}
