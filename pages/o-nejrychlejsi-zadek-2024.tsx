@@ -102,14 +102,18 @@ export default function TabulkaDenniZadek2024({ data }: any) {
       )}
 
       {menTable.length !== 0 && (
-        <FinnishTable table={menTable} zadek title="Muži - Průběžné výsledky" />
+        <FinnishTable table={menTable} zadek title={`Muži - ${
+            startTable.length === 0 ? 'Konečné' : 'Průběžné'
+          } výsledky`} />
       )}
 
       {womenTable.length !== 0 && (
         <FinnishTable
           zadek
           table={womenTable}
-          title="Ženy - Průběžné výsledky"
+          title={`Ženy - ${
+            startTable.length === 0 ? 'Konečné' : 'Průběžné'
+          } výsledky`}
           women
         />
       )}
