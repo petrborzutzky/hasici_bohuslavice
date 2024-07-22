@@ -60,8 +60,16 @@ export function StartTable({
 
 export function sortTable(table: any[]) {
   table
-    .sort((a, b) =>
-      a[5] > b[5]
+    .sort((a, b) => {
+      // V případě času pod 10s se pro třídění řetězce přidá '0' na začátek řetězce.
+      if (a[5].length === 4) {
+        a[5] = '0' + a[5];
+      }
+      if (b[5].length === 4) {
+        b[5] = '0' + b[5];
+      }
+
+      return a[5] > b[5]
         ? 1
         : b[5] > a[5]
         ? -1
@@ -71,8 +79,8 @@ export function sortTable(table: any[]) {
         : Number(b[3].replace(',', '.')) + Number(b[4].replace(',', '.')) >
           Number(a[3].replace(',', '.')) + Number(a[4].replace(',', '.'))
         ? -1
-        : 0
-    )
+        : 0;
+    })
     .sort((a, b) => {
       if (a[5] === 'D' || b[5] === 'D') {
         if (a[5] === 'D' && b[5] !== 'D') {
@@ -97,6 +105,13 @@ export function sortTable(table: any[]) {
       table[i][0] = (i + 1).toString() + '.';
     }
   }
+  // Odstranění '0' z řetězce
+  for (let i = 0; i < table.length; i++) {
+    if (table[i][5][0] === '0') {
+      table[i][5] = table[i][5].slice(1);
+    }
+  }
+
   return table;
 }
 
