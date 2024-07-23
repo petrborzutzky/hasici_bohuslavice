@@ -1,4 +1,3 @@
-// components/TableComponent.tsx
 import React from 'react';
 import FinnishTable from './FinnishTable';
 import { StartTable, processTableData } from './Table';

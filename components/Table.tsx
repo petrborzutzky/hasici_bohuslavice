@@ -14,7 +14,7 @@ export function StartTable({
   startTime.setMinutes(startTime.getMinutes() - duration);
   return (
     <>
-      <table className="mx-auto shadow-lg text-xs sm:text-base min-w-full sm:min-w-0">
+      <table className="mx-auto shadow-lg mt-10 text-xs sm:text-base min-w-full sm:min-w-0">
         <thead>
           <tr>
             <th className="py-2 sm:px-5 px-2 text-left">Start. pořadí</th>
