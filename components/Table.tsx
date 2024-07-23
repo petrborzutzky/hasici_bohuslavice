@@ -112,7 +112,6 @@ function sortTable(table: any[]) {
       table[i][5] = table[i][5].slice(1);
     }
   }
-
   return table;
 }
 
