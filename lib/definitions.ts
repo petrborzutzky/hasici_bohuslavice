@@ -19,3 +19,9 @@ export type UsersRowDataZadek = {
   'PRŮBĚŽNÉ UMÍSTĚNÍ': number | null;
   Odběhnuto: Date | null;
 };
+
+export interface PageProps {
+  data: any[];
+  startDate: string;
+  duration: number;
+}

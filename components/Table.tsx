@@ -58,10 +58,19 @@ export function StartTable({
   );
 }
 
-export function sortTable(table: any[]) {
+function sortTable(table: any[]) {
   table
-    .sort((a, b) =>
-      a[5] > b[5]
+    .sort((a, b) => {
+      // V případě času pod 10s se pro třídění řetězce přidá '0' na začátek řetězce.
+
+      if (a[5].length === 4) {
+        a[5] = '0' + a[5];
+      }
+      if (b[5].length === 4) {
+        b[5] = '0' + b[5];
+      }
+
+      return a[5] > b[5]
         ? 1
         : b[5] > a[5]
         ? -1
@@ -71,8 +80,8 @@ export function sortTable(table: any[]) {
         : Number(b[3].replace(',', '.')) + Number(b[4].replace(',', '.')) >
           Number(a[3].replace(',', '.')) + Number(a[4].replace(',', '.'))
         ? -1
-        : 0
-    )
+        : 0;
+    })
     .sort((a, b) => {
       if (a[5] === 'D' || b[5] === 'D') {
         if (a[5] === 'D' && b[5] !== 'D') {
@@ -97,6 +106,13 @@ export function sortTable(table: any[]) {
       table[i][0] = (i + 1).toString() + '.';
     }
   }
+  // Odstranění '0' z řetězce
+  for (let i = 0; i < table.length; i++) {
+    if (table[i][5][0] === '0') {
+      table[i][5] = table[i][5].slice(1);
+    }
+  }
+
   return table;
 }
 
@@ -105,12 +121,12 @@ function timeToSeconds(time: string) {
   return hours * 3600 + minutes * 60 + seconds;
 }
 
-export function compareTimes(time1: string, time2: string) {
+function compareTimes(time1: string, time2: string) {
   const seconds1 = timeToSeconds(time1);
   const seconds2 = timeToSeconds(time2);
 
-  // Pokud je čas1 mezi půlnocí a 6:00 a čas2 mezi 18:00 a půlnocí, přičteme 24 hodin k čas1
-  if (seconds1 < 6 * 3600 && seconds2 > 18 * 3600) {
+  // Pokud je čas1 mezi půlnocí a 5:00 a čas2 mezi 20:00 a půlnocí, přičteme 24 hodin k čas1
+  if (seconds1 < 5 * 3600 && seconds2 > 20 * 3600) {
     if (seconds1 + 24 * 3600 - seconds2 > 0) {
       return true;
     } else {
@@ -123,4 +139,35 @@ export function compareTimes(time1: string, time2: string) {
       return false;
     }
   }
+}
+
+export function processTableData(data: any, startDate: string) {
+  const startTable = [];
+  let menTable = [];
+  let womenTable = [];
+  let lastRun = startDate.split(' ')[1];
+
+  for (let i = 0; i < data.length; i++) {
+    if (!data[i][1]) {
+      continue;
+    }
+    if (!data[i][7] || !data[i][5]) {
+      startTable.push(data[i]);
+      if (data[i][7]) {
+        lastRun = compareTimes(data[i][7], lastRun) ? data[i][7] : lastRun;
+      }
+    } else {
+      lastRun = compareTimes(data[i][7], lastRun) ? data[i][7] : lastRun;
+      if (data[i][2] === 'MUŽI') {
+        menTable.push(data[i]);
+      } else {
+        womenTable.push(data[i]);
+      }
+    }
+  }
+
+  menTable = sortTable(menTable);
+  womenTable = sortTable(womenTable);
+
+  return { startTable, menTable, womenTable, lastRun };
 }

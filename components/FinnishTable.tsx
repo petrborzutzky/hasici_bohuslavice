@@ -11,7 +11,7 @@ export default function FinnishTable({
 }) {
   return (
     <>
-      <h2 className="text-xl mb-10 text-center mt-20">{title}</h2>
+      <h2 className="text-xl mb-5 text-center mt-10">{title}</h2>
       <table className="min-w-full text-xs sm:text-base shadow-lg mx-auto sm:min-w-0">
         <thead>
           <tr className={women ? 'bg-red-200' : 'bg-blue-200'}>
