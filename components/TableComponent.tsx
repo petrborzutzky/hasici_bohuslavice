@@ -48,7 +48,7 @@ const TableComponent: React.FC<TableComponentProps> = ({
           title={`Muži - ${
             startTable.length === 0 ? 'Konečné' : 'Průběžné'
           } výsledky`}
-          zadek
+          zadek={zadek}
         />
       )}
 
@@ -59,7 +59,7 @@ const TableComponent: React.FC<TableComponentProps> = ({
             startTable.length === 0 ? 'Konečné' : 'Průběžné'
           } výsledky`}
           women
-          zadek
+          zadek={zadek}
         />
       )}
     </>
