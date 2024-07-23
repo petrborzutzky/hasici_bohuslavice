@@ -17,9 +17,13 @@ export function StartTable({
       <table className="mx-auto shadow-lg mt-10 text-xs sm:text-base min-w-full sm:min-w-0">
         <thead>
           <tr>
-            <th className="py-2 sm:px-5 px-2 text-left">Startovní pořadí</th>
-            <th className="py-2 sm:px-5 px-2 text-left">Na základně</th>
-            <th className="py-2 sm:px-5 px-2 text-left">Soutěžící</th>
+            <th className="py-2 sm:px-5 px-2 text-left min-w-full max-w-[5rem] whitespace-nowrap sm:max-w-none">
+              Startovní pořadí
+            </th>
+            <th className="py-2 sm:px-5 px-2 text-left min-w-full max-w-[3rem] whitespace-nowrap sm:max-w-none">
+              Na základně
+            </th>
+            <th className="py-2 sm:px-5 px-2 text-left ">Soutěžící</th>
           </tr>
         </thead>
         <tbody className="text-center font-mono">
