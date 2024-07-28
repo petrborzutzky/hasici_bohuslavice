@@ -12,7 +12,7 @@ export default function FinnishTable({
   return (
     <>
       <h2 className="text-xl mb-5 text-center mt-10">{title}</h2>
-      <table className="min-w-full text-xs sm:text-base shadow-lg mx-auto sm:min-w-0">
+      <table className="min-w-full text-xs sm:text-base shadow-lg mx-auto sm:min-w-0 dark:text-slate-800">
         <thead>
           <tr className={women ? 'bg-red-200' : 'bg-blue-200'}>
             <th className="py-2 px-2 sm:px-5 sm:text-center text-left">Poř.</th>
@@ -30,9 +30,9 @@ export default function FinnishTable({
               <tr
                 key={i}
                 className={
-                  row[2] === 'ŽENY'
-                    ? 'odd:bg-white bg-red-50 hover:bg-red-400 border-b-2'
-                    : 'odd:bg-white bg-blue-50 hover:bg-blue-400 border-b-2'
+                  (row[2] === 'ŽENY'
+                    ? 'bg-red-50 hover:bg-red-400 '
+                    : 'bg-blue-50 hover:bg-blue-400 ') + 'odd:bg-white border-b'
                 }
               >
                 <td className="font-bold text-left pl-2 sm:px-5 sm:text-center whitespace-nowrap">

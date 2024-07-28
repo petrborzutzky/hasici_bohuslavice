@@ -4,22 +4,19 @@ import { fetchData } from '../lib/fetchData';
 import Link from 'next/link';
 import { PageProps } from '../lib/definitions';
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  const startDate = '2024-07-21 15:00:00';
-  const duration = 5;
+const START_DATE = '2024-07-21 15:00:00';
+const DURATION = 5;
 
+export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const sheetId = process.env.GOOGLE_SHEET_ID2 as string;
     if (!sheetId) {
       throw new Error('Sheet ID not found');
     }
-
     const data = await fetchData(sheetId);
     return {
       props: {
         data,
-        startDate,
-        duration,
       },
     };
   } catch (error) {
@@ -27,24 +24,18 @@ export const getServerSideProps: GetServerSideProps = async () => {
     return {
       props: {
         data: [],
-        startDate,
-        duration,
       },
     };
   }
 };
 
-export default function TabulkaDenni2024({
-  data,
-  startDate,
-  duration,
-}: PageProps) {
+export default function TabulkaDenni2024({ data }: PageProps) {
   return (
     <>
       <TableComponent
         data={data}
-        startDate={startDate}
-        duration={duration}
+        startDate={START_DATE}
+        duration={DURATION}
         titleH1="Memoriál Rudolfa Šebestíka 2024"
         titleH2="XXXI. ročník"
       />

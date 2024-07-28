@@ -6,3 +6,4 @@ export { default as Footer } from './Footer';
 export { default as Avatar } from './Avatar';
 export { default as MenuPopOver } from './MenuPopOver';
 export { default as MobilMenu } from './MobilMenu';
+export { default as DarkModeToggle } from './DarkModeToggle';

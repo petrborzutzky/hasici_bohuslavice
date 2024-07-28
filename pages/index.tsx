@@ -1,4 +1,4 @@
-import { PostCard } from '../components';
+import { DarkModeToggle, PostCard } from '../components';
 import { getPosts } from '../services';
 import Link from 'next/link';
 import React from 'react';
@@ -40,7 +40,7 @@ export default function Home({ posts }: HomeProps) {
       ))}
       <div className="float-right">
         <Link href="/archiv/2">
-          <span className="hover:text-red-700 text-blue-400 cursor-pointer underline mx-5">
+          <span className="hover:text-blue-500  text-blue-400 cursor-pointer underline mx-5">
             Další články...
           </span>
         </Link>

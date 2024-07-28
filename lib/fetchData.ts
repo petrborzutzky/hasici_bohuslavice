@@ -1,4 +1,3 @@
-// lib/fetchData.ts
 import { GoogleSpreadsheet } from 'google-spreadsheet';
 import { JWT } from 'google-auth-library';
 import NodeCache from 'node-cache';

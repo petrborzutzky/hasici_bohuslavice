@@ -9,7 +9,7 @@ import {
   FireIcon,
 } from '@heroicons/react/outline';
 import Link from 'next/link';
-import { MenuPopOver, MobilMenu } from '.';
+import { DarkModeToggle, MenuPopOver, MobilMenu } from '.';
 
 const sdh = [
   {
@@ -90,7 +90,7 @@ function classNames(...classes: string[]) {
 
 const Header = () => {
   return (
-    <Popover className="bg-white z-50 sticky top-0 shadow-lg">
+    <Popover className="bg-white z-50 sticky top-0 shadow-lg dark:bg-slate-900 dark:text-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-2 lg:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -105,10 +105,11 @@ const Header = () => {
               </span>
             </Link>
           </div>
+          <DarkModeToggle />
           <div className="-mr-2 -my-2 lg:hidden">
-            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 ">
+            <Popover.Button className="bg-white dark:bg-slate-900 rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-slate-50 dark:hover:text-slate-300 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-slate-700">
               <span className="sr-only">Open menu</span>
-              <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              <MenuIcon className="h-6 w-6  " aria-hidden="true" />
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden lg:flex space-x-10">
@@ -119,7 +120,7 @@ const Header = () => {
             <MenuPopOver titleMenu="TFA" childrenMenu={tfa} />
 
             <Link href="#kontakty">
-              <span className="text-base cursor-pointer font-medium text-gray-500 hover:text-red-800">
+              <span className="text-base cursor-pointer font-medium text-gray-500 hover:text-red-800 dark:text-slate-50 dark:hover:text-slate-300">
                 Kontakt
               </span>
             </Link>
@@ -138,9 +139,9 @@ const Header = () => {
       >
         <Popover.Panel
           focus
-          className="absolute bg-white top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden"
+          className="absolute bg-white top-0 inset-x-0 p-2 transition transform origin-top-right lg:hidden dark:bg-slate-800"
         >
-          <div className="shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+          <div className="shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50 dark:bg-slate-700">
             <div className="pb-5 pt-2 px-5">
               <div className="flex items-center justify-between">
                 <div>
@@ -152,7 +153,7 @@ const Header = () => {
                   Hasiči Bohuslavice
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="bg-white p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none ">
+                  <Popover.Button className="bg-white p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 dark:bg-slate-700 dark:hover:bg-slate-600 dark:hover:text-slate-200  hover:bg-gray-100 focus:outline-none ">
                     <span className="sr-only">Zavřít menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -170,15 +171,15 @@ const Header = () => {
                   <MobilMenu titleMenu="Muži" childrenMenu={muzi} />
                   <MobilMenu titleMenu="TFA" childrenMenu={tfa} />
                   <Link href="#kontakty">
-                    <span className="mt-1 flex cursor-pointer items-center hover:bg-red-50">
+                    <span className="mt-1 flex cursor-pointer items-center hover:bg-red-50 dark:hover:bg-slate-600">
                       <Popover.Button>
                         <InformationCircleIcon
-                          className="m-1 flex-shrink-0 h-6 w-6 text-red-800"
+                          className="m-1 flex-shrink-0 h-6 w-6 text-red-800 dark:text-red-500"
                           aria-hidden="true"
                         />
                       </Popover.Button>
                       <Popover.Button className="w-full text-left">
-                        <span className="ml-2 p-1 text-base font-medium text-gray-900">
+                        <span className="ml-2 p-1 text-base font-medium text-gray-900 dark:text-slate-300">
                           Kontakt
                         </span>
                       </Popover.Button>

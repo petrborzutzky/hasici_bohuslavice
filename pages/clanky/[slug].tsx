@@ -31,7 +31,7 @@ const PostDetails = ({ post }: PostDetailsProps) => {
       />
       <h1 className="text-xl mb-5 font-bold">{post.title} </h1>
       <div className="text-xs mb-5">
-        <CalendarIcon className="w-4 inline-block mb-1 mr-2 text-red-800" />
+        <CalendarIcon className="w-4 inline-block mb-1 mr-2 text-red-800 dark:text-red-500" />
         {moment(post.createdAt).format('DD. MM. YYYY')}
       </div>
       <p className="mb-5">{post.excerpt}</p>
