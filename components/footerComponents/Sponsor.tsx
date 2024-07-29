@@ -15,7 +15,6 @@ const Sponsor = ({
   altText,
   bgWhiteOnDarkMode = false,
 }: SponsorProps) => {
-  console.log(bgWhiteOnDarkMode);
   return (
     <Link href={href}>
       <span

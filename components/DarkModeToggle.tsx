@@ -5,11 +5,9 @@ const DarkModeToggle: React.FC = () => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
-    // Načtení stavu z localStorage při prvním renderu
     const storedDarkMode = localStorage.getItem('darkMode') === 'true';
     setDarkMode(storedDarkMode);
 
-    // Nastavení class podle načteného stavu
     if (storedDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
@@ -18,10 +16,11 @@ const DarkModeToggle: React.FC = () => {
   }, []);
 
   const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    localStorage.setItem('darkMode', JSON.stringify(!darkMode));
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    localStorage.setItem('darkMode', JSON.stringify(newDarkMode));
 
-    if (!darkMode) {
+    if (newDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
@@ -31,13 +30,23 @@ const DarkModeToggle: React.FC = () => {
   return (
     <button
       onClick={toggleDarkMode}
-      className="p-2 rounded-md dark:bg-gray-900 text-gray-900 dark:text-gray-200 hover:text-slate-600 hover:dark:text-slate-400"
+      className="relative w-14 h-7 bg-gray-300 dark:bg-gray-700 rounded-full p-1 flex items-center transition-colors duration-300 hover:bg-gray-400 dark:hover:bg-gray-600 group"
     >
-      {darkMode ? (
-        <SunIcon className="w-6 h-6" />
-      ) : (
-        <MoonIcon className="w-6 h-6" />
-      )}
+      <span
+        className={`absolute w-5 h-5 bg-white rounded-full shadow-md transform transition-transform duration-300 ${
+          darkMode ? 'translate-x-7' : 'translate-x-0'
+        }`}
+      />
+      <SunIcon
+        className={`absolute left-1 w-5 h-5 text-gray-500 transition-opacity duration-300 ${
+          darkMode ? 'opacity-0' : 'opacity-100'
+        } group-hover:text-yellow-500`}
+      />
+      <MoonIcon
+        className={`absolute right-1 w-5 h-5 text-gray-500 transition-opacity duration-300 ${
+          darkMode ? 'opacity-100' : 'opacity-0'
+        } group-hover:text-blue-500`}
+      />
     </button>
   );
 };
