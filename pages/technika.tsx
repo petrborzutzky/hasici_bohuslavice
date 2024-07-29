@@ -85,7 +85,7 @@ function technika() {
       <h2 className="text-xl mt-10 mb-3 text-center">
         Tatra 815 - CAS32/8200/800
       </h2>
-      <p className="text-center text-red-800">
+      <p className="text-center text-red-800 dark:text-slate-300">
         Užíváno v letech 2008-2021. Následně prodáno hasičům z Unína (SK)
       </p>
       <div className="container relative w-full h-64 shadow-lg mt-10 mb-10 hover:shadow-2xl">
@@ -121,7 +121,9 @@ function technika() {
       </ul>
 
       <h2 className="text-xl mt-10 mb-3 text-center">Avie A31 DA12</h2>
-      <p className="text-center text-red-800">Užíváno v letech 1984-2017.</p>
+      <p className="text-center text-red-800 dark:text-slate-300">
+        Užíváno v letech 1984-2017.
+      </p>
       <div className="container relative w-full h-64 shadow-lg mt-10 mb-10 hover:shadow-2xl">
         <Link href="/avie.jpg" className="cursor-pointer">
           <Image

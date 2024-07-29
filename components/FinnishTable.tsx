@@ -12,9 +12,15 @@ export default function FinnishTable({
   return (
     <>
       <h2 className="text-xl mb-5 text-center mt-10">{title}</h2>
-      <table className="min-w-full text-xs sm:text-base shadow-lg mx-auto sm:min-w-0 dark:text-slate-800">
+      <table className="min-w-full text-xs sm:text-base shadow-lg mx-auto sm:min-w-0 dark:text-slate-300 ">
         <thead>
-          <tr className={women ? 'bg-red-200' : 'bg-blue-200'}>
+          <tr
+            className={
+              women
+                ? 'bg-red-200 dark:bg-rose-900'
+                : 'bg-blue-200 dark:bg-sky-900'
+            }
+          >
             <th className="py-2 px-2 sm:px-5 sm:text-center text-left">Poř.</th>
             <th className="py-2 px-2 text-left">Soutěžící</th>
             {!zadek && <th className="py-2">LP</th>}
@@ -32,7 +38,8 @@ export default function FinnishTable({
                 className={
                   (row[2] === 'ŽENY'
                     ? 'bg-red-50 hover:bg-red-400 '
-                    : 'bg-blue-50 hover:bg-blue-400 ') + 'odd:bg-white border-b'
+                    : 'bg-blue-50 hover:bg-blue-400 ') +
+                  'odd:bg-white border-b dark:odd:bg-slate-600 dark:bg-slate-700 dark:hover:bg-slate-500 dark:border-slate-900'
                 }
               >
                 <td className="font-bold text-left pl-2 sm:px-5 sm:text-center whitespace-nowrap">
@@ -50,12 +57,12 @@ export default function FinnishTable({
                   {row[0] === '2.' ? '🥈' : ''}
                   {row[0] === '3.' ? '🥉' : ''}
                 </td>
-                <td className="text-left p-2 border-x">
+                <td className="text-left p-2 border-x dark:border-slate-900">
                   {row[1]}
                   {row[2] === 'ŽENY' ? ' (Ž)' : ''}
                 </td>
                 {!zadek && (
-                  <td className="text-xs border-x px-1 whitespace-nowrap">
+                  <td className="text-xs border-x dark:border-slate-900 px-1 whitespace-nowrap">
                     {row[3]}{' '}
                     <span className="text-gray-500">
                       {secondRemover(row[3])}
@@ -63,7 +70,7 @@ export default function FinnishTable({
                   </td>
                 )}
                 {!zadek && (
-                  <td className="text-xs border-x px-1 whitespace-nowrap">
+                  <td className="text-xs border-x px-1 dark:border-slate-900 whitespace-nowrap">
                     {row[4]}
                     <span className="text-gray-500">
                       {secondRemover(row[4])}

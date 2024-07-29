@@ -14,7 +14,7 @@ export function StartTable({
   startTime.setMinutes(startTime.getMinutes() - duration);
   return (
     <>
-      <table className="mx-auto shadow-lg mt-10 text-xs sm:text-base min-w-full sm:min-w-0 dark:text-slate-800">
+      <table className="mx-auto shadow-lg mt-10 text-xs sm:text-base min-w-full sm:min-w-0 dark:text-slate-300 ">
         <thead>
           <tr>
             <th className="py-2 sm:px-5 px-2 text-left min-w-full max-w-[5rem] whitespace-nowrap sm:max-w-none">
@@ -35,21 +35,21 @@ export function StartTable({
                 key={i}
                 className={
                   row[2] === 'ŽENY'
-                    ? 'bg-red-200 hover:bg-red-400'
-                    : 'bg-blue-200 hover:bg-blue-400'
+                    ? 'bg-red-200 hover:bg-red-400 dark:bg-rose-900'
+                    : 'bg-blue-200 hover:bg-blue-400 dark:bg-sky-900'
                 }
               >
-                <td className="py-2 sm:px-5 px-2 border text-left">
+                <td className="py-2 sm:px-5 px-2 border dark:border-slate-900 text-left">
                   {i + 1 + menTableLength + womenTableLength}.
                 </td>
-                <td className="py-2 sm:px-5 px-2 border text-left">
+                <td className="py-2 sm:px-5 px-2 border dark:border-slate-900 text-left">
                   {startTime.getHours() +
                     ':' +
                     (startTime.getMinutes() < 10 ? '0' : '') +
                     startTime.getMinutes() +
                     ' h'}
                 </td>
-                <td className="text-left py-2 sm:px-5 px-2 border">
+                <td className="text-left py-2 sm:px-5 px-2 border dark:border-slate-900">
                   {row[1]}
                   {row[2] === 'ŽENY' ? ' (Ž)' : ''}
                 </td>

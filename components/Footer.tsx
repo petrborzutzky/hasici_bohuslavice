@@ -4,7 +4,7 @@ import { ContactMember, Sponsor } from './footerComponents';
 const Footer = () => {
   return (
     <>
-      <div className="w-full flex bg-stone-300 flex-wrap items-center justify-center text-center gap-10 text-black p-10">
+      <div className="w-full flex bg-stone-300 flex-wrap items-center justify-center text-center gap-10 text-black p-10 dark:bg-slate-800">
         <Sponsor
           href="https://www.bohuslavice.eu/"
           height="h-20"
@@ -28,12 +28,14 @@ const Footer = () => {
           height="h-16"
           source="valkodoprava.png"
           altText="Valko doprava"
+          bgWhiteOnDarkMode
         />
         <Sponsor
           href="https://www.pedotherm.cz/"
           height="h-8"
           source="pedotherm.png"
           altText="Pedotherm"
+          bgWhiteOnDarkMode
         />
         <Sponsor
           href="https://www.facebook.com/Restaurace-Majk-325344344316757"
@@ -49,7 +51,7 @@ const Footer = () => {
         />
       </div>
       <section id="kontakty" />
-      <div className="w-full flex bg-stone-600 flex-wrap justify-center text-center gap-20 text-white p-5">
+      <div className="w-full flex bg-stone-600 flex-wrap justify-center text-center gap-20 text-white p-5 dark:bg-slate-700 dark:text-slate-300">
         <ContactMember
           title="Starosta Sdh"
           name="Adam Ryš"
