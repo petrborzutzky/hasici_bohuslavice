@@ -23,14 +23,14 @@ export default function Home({ posts }: HomeProps) {
   return (
     <>
       <div className="flex flex-col">
-        <Link href="/tabulka-nocni-2024">
+        <Link href="/tabulka-nocni">
           <div className="hover:text-blue-600 text-blue-400 cursor-pointer underline mb-10 text-lg mx-auto text-center inline-block">
-            Tabulka - Noční soutěž - 7. kolo NHHL Bohuslavice
+            Tabulka - Noční soutěž - 6. kolo NHHL Bohuslavice
           </div>
         </Link>
-        <Link href="/tabulka-memorial-rudolfa-sebestika-2024">
+        <Link href="/tabulka-memorial-rudolfa-sebestika">
           <div className="hover:text-blue-600 text-blue-400 cursor-pointer underline mb-10 text-lg mx-auto text-center inline-block">
-            Tabulka - XXXI. ročník Memoriálu Rudolfa Šebestíka
+            Tabulka - XXXII. ročník Memoriálu Rudolfa Šebestíka
           </div>
         </Link>
       </div>

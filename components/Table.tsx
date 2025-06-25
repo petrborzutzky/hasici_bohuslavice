@@ -4,14 +4,17 @@ export function StartTable({
   menTableLength,
   womenTableLength,
   duration,
+  countingFromZero,
 }: {
   startTime: Date;
   startTable: any;
   menTableLength: number;
   womenTableLength: number;
   duration: number;
+  countingFromZero?: boolean;
 }) {
   startTime.setMinutes(startTime.getMinutes() - duration);
+  const offset: number = countingFromZero ? 0 : 1;
   return (
     <>
       <table className="mx-auto shadow-lg mt-10 text-xs sm:text-base min-w-full sm:min-w-0 dark:text-slate-300 ">
@@ -40,7 +43,7 @@ export function StartTable({
                 }
               >
                 <td className="py-2 sm:px-5 px-2 border dark:border-slate-900 text-left">
-                  {i + 1 + menTableLength + womenTableLength}.
+                  {i + offset + menTableLength + womenTableLength}.
                 </td>
                 <td className="py-2 sm:px-5 px-2 border dark:border-slate-900 text-left">
                   {startTime.getHours() +

@@ -3,7 +3,7 @@ import TableComponent from '../components/TableComponent';
 import { fetchData } from '../lib/fetchData';
 import { PageProps } from '../lib/definitions';
 
-const START_DATE = '2024-07-21 17:00:00';
+const START_DATE = '2025-06-29 17:00:00';
 const DURATION = 3;
 export const getServerSideProps: GetServerSideProps = async () => {
   const zadek = true;
@@ -29,14 +29,14 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 };
 
-export default function TabulkaDenniZadek2024({ data }: PageProps) {
+export default function TabulkaDenniZadek({ data }: PageProps) {
   return (
     <>
       <TableComponent
         data={data}
         startDate={START_DATE}
         duration={DURATION}
-        titleH1="Memoriál Rudolfa Šebestíka 2024"
+        titleH1="Memoriál Rudolfa Šebestíka 2025"
         titleH2="O nejrychlejší zadek"
         zadek
       />

@@ -3,8 +3,9 @@ import TableComponent from '../components/TableComponent';
 import { fetchData } from '../lib/fetchData';
 import { PageProps } from '../lib/definitions';
 
-const START_DATE = '2024-07-19 21:30:00';
+const START_DATE = '2025-06-27 22:00:00';
 const DURATION = 5;
+const COUNTING_FROM_ZERO = true;
 
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
@@ -28,15 +29,16 @@ export const getServerSideProps: GetServerSideProps = async () => {
     };
   }
 };
-export default function TabulkaNocni2024({ data }: PageProps) {
+export default function TabulkaNocni({ data }: PageProps) {
   return (
     <>
       <TableComponent
         data={data}
         startDate={START_DATE}
         duration={DURATION}
+        countingFromZero={COUNTING_FROM_ZERO}
         titleH1="Noční soutěž Bohuslavice"
-        titleH2="7. kolo NHHL (2024)"
+        titleH2="6. kolo NHHL (2025)"
       />
     </>
   );

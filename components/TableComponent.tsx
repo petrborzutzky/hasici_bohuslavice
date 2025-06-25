@@ -5,6 +5,7 @@ import { StartTable, processTableData } from './Table';
 interface TableComponentProps {
   data: any[];
   startDate: string;
+  countingFromZero?: boolean;
   duration: number;
   titleH1: string;
   titleH2?: string;
@@ -18,6 +19,7 @@ const TableComponent: React.FC<TableComponentProps> = ({
   titleH1,
   titleH2,
   zadek,
+  countingFromZero,
 }) => {
   const { startTable, menTable, womenTable, lastRun } = processTableData(
     data,
@@ -38,6 +40,7 @@ const TableComponent: React.FC<TableComponentProps> = ({
           menTableLength={menTable.length}
           womenTableLength={womenTable.length}
           duration={duration}
+          countingFromZero={countingFromZero}
         />
       )}
 
