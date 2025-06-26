@@ -29,7 +29,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     };
   }
 };
-export default function TabulkaNocni({ data }: PageProps) {
+export default function Nhhl({ data }: PageProps) {
   return (
     <>
       <TableComponent

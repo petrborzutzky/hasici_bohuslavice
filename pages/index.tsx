@@ -23,7 +23,7 @@ export default function Home({ posts }: HomeProps) {
   return (
     <>
       <div className="flex flex-col">
-        <Link href="/tabulka-nocni">
+        <Link href="/nhhl">
           <div className="hover:text-blue-600 text-blue-400 cursor-pointer underline mb-10 text-lg mx-auto text-center inline-block">
             Tabulka - Noční soutěž - 6. kolo NHHL Bohuslavice
           </div>
