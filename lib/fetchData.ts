@@ -5,7 +5,8 @@ import NodeCache from 'node-cache';
 const myCache = new NodeCache({ stdTTL: 30, checkperiod: 30 });
 
 export async function fetchData(sheetId: string, zadek: boolean = false) {
-  const cachedData = myCache.get(sheetId);
+  const cacheKey = zadek ? sheetId + 'zadek' : sheetId;
+  const cachedData = myCache.get(cacheKey);
   if (cachedData) {
     return cachedData;
   }
@@ -42,6 +43,6 @@ export async function fetchData(sheetId: string, zadek: boolean = false) {
     row.get('Odběhnuto') || null,
   ]);
 
-  myCache.set(sheetId, data);
+  myCache.set(cacheKey, data);
   return data;
 }
