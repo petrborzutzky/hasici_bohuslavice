@@ -3,7 +3,7 @@ import TableComponent from '../components/TableComponent';
 import { fetchData } from '../lib/fetchData';
 import { PageProps } from '../lib/definitions';
 
-const START_DATE = '2025-06-29 17:00:00';
+const START_DATE = '2025-06-29 16:00:00';
 const DURATION = 3;
 export const getServerSideProps: GetServerSideProps = async () => {
   const zadek = true;
