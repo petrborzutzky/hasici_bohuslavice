@@ -2,6 +2,7 @@ import { GetServerSideProps } from 'next';
 import TableComponent from '../components/TableComponent';
 import { fetchData } from '../lib/fetchData';
 import { PageProps } from '../lib/definitions';
+import { useEffect, useState } from 'react';
 
 const START_DATE = '2025-06-29 16:00:00';
 const DURATION = 3;
@@ -29,7 +30,23 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 };
 
-export default function TabulkaDenniZadek({ data }: PageProps) {
+export default function TabulkaDenniZadek({ data: initialData }: PageProps) {
+  const [data, setData] = useState(initialData);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch('/api/sheet');
+        const json = await res.json();
+        setData(json);
+      } catch (err) {
+        console.error('Client-side fetch failed:', err);
+      }
+    };
+
+    const interval = setInterval(fetchData, 30000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <TableComponent

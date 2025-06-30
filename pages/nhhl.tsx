@@ -2,6 +2,7 @@ import { GetServerSideProps } from 'next';
 import TableComponent from '../components/TableComponent';
 import { fetchData } from '../lib/fetchData';
 import { PageProps } from '../lib/definitions';
+import { useEffect, useState } from 'react';
 
 const START_DATE = '2025-06-27 22:00:00';
 const DURATION = 5;
@@ -29,7 +30,23 @@ export const getServerSideProps: GetServerSideProps = async () => {
     };
   }
 };
-export default function Nhhl({ data }: PageProps) {
+export default function Nhhl({ data: initialData }: PageProps) {
+  const [data, setData] = useState(initialData);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch('/api/sheet2');
+        const json = await res.json();
+        setData(json);
+      } catch (err) {
+        console.error('Chyba při fetchi /api/sheet2:', err);
+      }
+    };
+
+    const interval = setInterval(fetchData, 30000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <TableComponent
