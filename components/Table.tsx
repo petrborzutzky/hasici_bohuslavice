@@ -70,10 +70,11 @@ function sortTable(table: any[]) {
     .sort((a, b) => {
       // V případě času pod 10s se pro třídění řetězce přidá '0' na začátek řetězce.
 
-      if (a[5].length === 4) {
+      if (a[5].split(',')[0].length === 1 && a[5] !== 'N' && a[5] !== 'D') {
         a[5] = '0' + a[5];
+        console.log(a[5]);
       }
-      if (b[5].length === 4) {
+      if (b[5].split(',')[0].length === 1 && b[5] !== 'D' && b[5] !== 'N') {
         b[5] = '0' + b[5];
       }
 
