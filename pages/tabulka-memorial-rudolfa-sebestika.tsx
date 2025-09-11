@@ -35,7 +35,7 @@ export default function TabulkaDenni({ data: initialData }: PageProps) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('/api/sheet');
+        const res = await fetch('/api/sheet?id=2');
         const json = await res.json();
         setData(json);
       } catch (err) {

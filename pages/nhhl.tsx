@@ -36,7 +36,7 @@ export default function Nhhl({ data: initialData }: PageProps) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('/api/sheet2');
+        const res = await fetch('/api/sheet?id=1');
         const json = await res.json();
         setData(json);
       } catch (err) {
