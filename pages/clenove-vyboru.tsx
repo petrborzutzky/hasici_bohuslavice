@@ -9,15 +9,11 @@ function clenove() {
       </h2>
       <div className="flex justify-evenly gap-5 flex-wrap">
         <Avatar
-          name="Adam Ryš"
-          functions="Starosta sboru"
-          photo="/avatars/15.jpg"
-        />
-        <Avatar
           name="Petr Kubík"
-          functions="Náměstek starosty"
+          functions="Starosta sboru"
           photo="/avatars/18.jpg"
         />
+        <Avatar name="Tomáš Dominik" functions="Náměstek starosty" />
         <Avatar
           name="Jan Manusch"
           functions="Velitel Sboru"
@@ -28,7 +24,7 @@ function clenove() {
           functions="Jednatel"
           photo="/avatars/01.jpg"
         />
-        <Avatar name="Ondřej Zedníček" functions="Hospodář" />
+        <Avatar name="ing. Ondřej Zedníček" functions="Hospodář" />
 
         <Avatar name="Heidutzková Ester" functions="Vedoucí mládeže" />
         <Avatar
@@ -36,44 +32,29 @@ function clenove() {
           functions="Strojník"
           photo="/avatars/19.jpg"
         />
-
         <Avatar
           name="David Zajíček"
           functions="Org. referent sboru"
           photo="/avatars/03.jpg"
         />
         <Avatar
-          name="Jiří Lasák"
-          functions="Referent prevence a výchovné činnosti"
-          photo="/avatars/24.jpg"
-        />
-        <Avatar
           name="Jiří Vitásek"
           functions="Referent ochrany obyvatel"
           photo="/avatars/05.jpg"
         />
-
-        <Avatar name="Lucie Gazdová" functions="Kronikář" />
         <Avatar
-          name="Pavel Gazda"
-          functions="Referent MTZ"
-          photo="/avatars/08.jpg"
+          name="ing. Adam Ryš"
+          functions="Kronikář"
+          photo="/avatars/15.jpg"
         />
+        <Avatar name="Lucie Gazdová" functions="Člen výboru" />
+
         <Avatar
           name="Jaroslav Kubík"
           functions="Člen výboru"
           photo="/avatars/20.jpg"
         />
-        <Avatar
-          name="David Kubík"
-          functions="Člen výboru"
-          photo="/avatars/11.jpg"
-        />
-        <Avatar
-          name="Silvie Ďurinová"
-          functions="Člen výboru"
-          photo="/avatars/22.jpg"
-        />
+        <Avatar name="Elen Buhlová" functions="Člen výboru" />
         <Avatar
           name="Matyáš Ďurina"
           functions="Člen výboru"
@@ -85,7 +66,11 @@ function clenove() {
           photo="/avatars/25.jpg"
         />
 
-        <Avatar name="Tomáš Dominik" functions="Revizor" />
+        <Avatar
+          name="Pavel Gazda"
+          functions="Revizor"
+          photo="/avatars/08.jpg"
+        />
       </div>
     </div>
   );
